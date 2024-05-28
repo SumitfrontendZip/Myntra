@@ -1,11 +1,14 @@
+import MainMenuItems from '../MainMenuItems/MainMenuItems'
 import './Mainmenu.css'
 function Mainmenu() {
 
-    const data = ['Men', 'Women', 'Kids', 'Home & Living', 'Beauty', 'Studio']
+    const categories = ['Men', 'Women', 'Kids', 'Home & Living', 'Beauty', 'Studio']
 
     return (
         <div className="mainMenu">
-            {data.map((e, index) => (<div key={index} className="navItems">{e.toUpperCase()}</div>))}
+            {categories.map((e, index) => (
+                <MainMenuItems key={index} items={e.toUpperCase()} />
+            ))}
         </div>
 
     )

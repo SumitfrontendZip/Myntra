@@ -1,4 +1,4 @@
-import InputBox from '../InputBox/InputBox'
+import SearchBar from '../SeachBar/SearchBar' 
 import Mainmenu from '../mainMenu/Mainmenu'
 import './Navbar.css'
 import NavProfile from '../NavProfile/NavProfile'
@@ -8,7 +8,7 @@ function Navbar() {
         <nav>
             <img src={logo} alt="" />
             <Mainmenu />
-            <InputBox/>
+            <SearchBar/>
             <NavProfile />
             
         </nav>

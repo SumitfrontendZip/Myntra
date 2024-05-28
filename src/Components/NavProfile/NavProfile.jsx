@@ -2,21 +2,20 @@ import profile from './customer.png'
 import wishlist from './heart.png'
 import bag from './bag.png'
 import './Navprofile.css'
+import NavProfileItems from '../NavProfileItems/NavProfileItems'
 function NavProfile() {
+    const ProfileItems = [
+        { itemName: 'Profile', img: profile },
+        { itemName: 'Wishlist', img: wishlist },
+        { itemName: 'Bag', img: bag }
+    ]
     return (
         <div className='navProfile'>
-            <div className="navProfileItems">
-                <img src={profile} alt="" />
-                <span>Profile</span>
-            </div>
-            <div className="navProfileItems">
-                <img src={wishlist} alt="" />
-                <span>Whishlist</span>
-            </div>
-            <div className="navProfileItems">
-                <img src={bag} alt="" />
-                <span>Bag</span>
-            </div>
+            {
+                ProfileItems.map((value, index) => (
+                    <NavProfileItems key={index} items={value} />
+                ))
+            }
         </div>
     )
 }

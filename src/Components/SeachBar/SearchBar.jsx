@@ -1,5 +1,5 @@
 import Icon from './SearchIcon.svg'
-import './Inputbox.css'
+import './SearchBar.css'
 function InputBox() {
     return (
         <div className="inputBar">
