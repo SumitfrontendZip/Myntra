@@ -1,0 +1,23 @@
+.navProfile{
+    display: flex;
+
+}
+.navProfileItems{
+    cursor: pointer;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    margin: 0px 10px;
+}
+.navProfileItems>img{
+    width: 20px;
+}
+.navProfileItems>span{
+    font-size: 12px;
+    font-weight: 700;
+    color: black;
+    padding-top: 4px;
+}
