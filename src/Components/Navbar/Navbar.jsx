@@ -1,3 +1,4 @@
+import InputBox from '../InputBox/InputBox'
 import Mainmenu from '../mainMenu/Mainmenu'
 import './Navbar.css'
 import logo from './myntra.svg'
@@ -6,7 +7,7 @@ function Navbar() {
         <nav>
             <img src={logo} alt="" />
             <Mainmenu />
-            <div></div>
+            <InputBox/>
             <div></div>
         </nav>
     )
