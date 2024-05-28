@@ -1,10 +1,10 @@
 import React from 'react'
 
-function ListingItems() {
+function ListingItems({value}) {
   return (
-    <div>
-      
-    </div>
+    <li>
+      {value}
+    </li>
   )
 }
 
