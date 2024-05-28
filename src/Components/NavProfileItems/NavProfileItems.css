@@ -1,13 +1,23 @@
 .profileSection {
     width: 250px;
-    height: 500px;
-    /* background: #000; */
-    color: white;
+    height: 400px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .08);
     position: absolute;
-    top: 80px;
+    top: 70px;
     padding: 20px;
+    background: white;
 }
 
+li{
+    margin: 5px 0px;
+    list-style: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+li:hover{
+    color: black;
+    font-weight: 700;
+}
 .profileSectionLeft>h3 {
     padding-bottom: 5px;
     color: #3e4152;
@@ -16,9 +26,12 @@
     text-overflow: ellipsis;
     font-weight: 700;
 }
-
-.profileSectionLeft>span {
+hr{
+    margin: 10px 0px;
     color: #282c3f;
+}
+.profileSectionLeft>span {
+    color: #44485b;
     font-size: 14px;
 }
 
@@ -35,6 +48,7 @@ button {
     font-weight: 700;
     background: #ffffff;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 button:hover{
     border-color: #ff3f6c;
