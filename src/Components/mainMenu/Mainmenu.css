@@ -6,10 +6,12 @@
   }
   
   .navItems {
+    font-size: 14px;
     display: flex;
     align-items: center;
     height: 80px;
-    margin: 0px 46px;
+    margin: 0px 16px;
+    color: #282c3f;
     letter-spacing: 0.3px;
     font-weight: 700;
     border-bottom: 2px solid transparent;  

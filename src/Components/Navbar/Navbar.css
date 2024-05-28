@@ -1,11 +1,13 @@
 nav > img {
-    width: 53px;
-    height: 36px;
+    width: 60px;
+    height: 40px;
 }
 nav {
     font-family: Assistant,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
     height: 80px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    padding: 0px 50px;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .05);
 }
