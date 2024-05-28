@@ -9,7 +9,8 @@ function Navbar() {
             <img src={logo} alt="" />
             <Mainmenu />
             <InputBox/>
-            <NavProfile/>
+            <NavProfile />
+            
         </nav>
     )
 }
