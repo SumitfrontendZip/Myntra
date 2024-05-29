@@ -1,4 +1,4 @@
-import ListItems from './ListItems'
+import ListItems from '../ListItem/ListItems'
 import './MenComponentsList.css'
 function MenComponentsList() {
     const Topwear = ['T-Shirts', 'Casual Shirts', 'Formal Shirts', 'SweetShirts', 'Sweaters', 'Jackets', 'Blazers & Coats', 'Suits', 'Rain Jackets']
