@@ -5,7 +5,7 @@ function NavProfileItems({ items }) {
     const categories1 = ['Orders', 'WhishList', 'Gift Cards', 'Contact Us', 'Myntra Insider']
     const categories2 = ['Myntra Credit', 'Coupouns', 'Saved Cards', 'Saved VPA', 'Saved Addresses']
 
-    const [isProfileHovered , setIsProfileHovered ] = useState(false)
+    const [isProfileHovered, setIsProfileHovered] = useState(false)
 
     const handleMouseEnter = () => {
         if (items.itemName === 'Profile') {
@@ -28,8 +28,9 @@ function NavProfileItems({ items }) {
             >
                 <img src={items.img} alt="" />
                 <span>{items.itemName}</span>
+                <div className={`components-container ${isProfileHovered ? 'show' : ''}`}>
                 {
-                   isProfileHovered && (
+                    isProfileHovered && (
                         <div className="profileSection">
                             <div className="profileSectionLeft">
                                 <h3>Welcome</h3>
@@ -60,6 +61,7 @@ function NavProfileItems({ items }) {
                         </div>
                     )
                 }
+                </div>
             </div>
 
         </>

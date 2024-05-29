@@ -27,9 +27,11 @@ function MainMenuItems({ items }) {
     return (
         <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             <div className="navItems" >{items}</div>
-            {
-                showMenComponentsList && categoriesShowComponents()
-            }
+            <div className={`components-container ${showMenComponentsList ? 'show' : ''}`}>
+                {
+                    showMenComponentsList && categoriesShowComponents()
+                }
+            </div>
         </div>
     )
 }
