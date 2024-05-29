@@ -2,7 +2,7 @@ import MainMenuItems from '../MainMenuItems/MainMenuItems'
 import './Mainmenu.css'
 function Mainmenu() {
 
-    const categories = ['Men', 'Women', 'Kids', 'Home & Living', 'Beauty', 'Studio']
+    const categories = ['Men', 'Women', 'Kids', 'Home & Living', 'Beauty', 'Studio'] 
 
     return (
         <div className="mainMenu">

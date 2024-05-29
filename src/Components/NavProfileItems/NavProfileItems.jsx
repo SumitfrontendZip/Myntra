@@ -5,20 +5,31 @@ function NavProfileItems({ items }) {
     const categories1 = ['Orders', 'WhishList', 'Gift Cards', 'Contact Us', 'Myntra Insider']
     const categories2 = ['Myntra Credit', 'Coupouns', 'Saved Cards', 'Saved VPA', 'Saved Addresses']
 
-    const [hover, setHover] = useState(false)
-    console.log(hover);
+    const [isProfileHovered , setIsProfileHovered ] = useState(false)
+
+    const handleMouseEnter = () => {
+        if (items.itemName === 'Profile') {
+            setIsProfileHovered(true);
+        }
+    };
+
+    const handleMouseLeave = () => {
+        if (items.itemName === 'Profile') {
+            setIsProfileHovered(false);
+        }
+    };
 
     return (
         <>
             <div
                 className="navProfileItems"
-                onMouseEnter={() => items.itemName === 'Profile' && setHover(true)}
-                onMouseLeave={() => items.itemName === 'Profile' && setHover(false)}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
             >
                 <img src={items.img} alt="" />
                 <span>{items.itemName}</span>
                 {
-                   hover && (
+                   isProfileHovered && (
                         <div className="profileSection">
                             <div className="profileSectionLeft">
                                 <h3>Welcome</h3>
