@@ -8,13 +8,12 @@ function MainMenuItems({ items }) {
     const onMouseEnter = () => items === 'MEN' && setShowMenComponentsList(true)
     const onMouseLeave = () => items === 'MEN' && setShowMenComponentsList(false)
     return (
-        <>
-            <div className="navItems" onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}>{items}</div>
+        <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+            <div className="navItems" >{items}</div>
             {
-                showMenComponentsList && (<MenComponentsList />)
+                showMenComponentsList && <MenComponentsList />
             }
-        </>
+        </div>
     )
 }
 
