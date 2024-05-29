@@ -1,4 +1,4 @@
-import ListItems from '../ListItem/ListItems'
+import ListItems from '../../ListItem/ListItems'
 
 function WomenComponentsLists() {
     const IndianandFusionWear = ['Kurtas & Suits', 'Kurtis', 'Tunics & Tops', 'Sarees', 'Ethnic Wear', 'Leggings', 'Salwars & Churidars', 'Skirts & Palazzos', 'Dress Materials', 'Lehenga Cholis', 'Dupattas & Shawls', 'Jackets']
