@@ -4,6 +4,7 @@ import WomenComponentsLists from "../ListComponents/WomenComponentsList/WomenCom
 import MenComponentsList from "../ListComponents/MenComponentsList/MenComponentsList"
 import HomeandLiving from "../ListComponents/HomeandLiving/HomeandLiving"
 import BeautyComponentsList from "../ListComponents/BeautyComponentsList/BeautyComponentsList"
+import StudioComponents from "../ListComponents/StudioComponents/StudioComponents"
 function MainMenuItems({ items }) {
 
     const [showMenComponentsList, setShowMenComponentsList] = useState(false)
@@ -18,7 +19,7 @@ function MainMenuItems({ items }) {
             case 'KIDS': return <KidsComponentsList />
             case 'HOME & LIVING': return <HomeandLiving />
             case 'BEAUTY': return <BeautyComponentsList />
-            case 'STUDIO': return <MenComponentsList />
+            case 'STUDIO': return <StudioComponents />
 
         }
     }
