@@ -8,16 +8,18 @@
     background: white;
 }
 
-li{
+li {
     margin: 5px 0px;
     list-style: none;
     font-size: 14px;
     cursor: pointer;
 }
-li:hover{
+
+li:hover {
     color: black;
     font-weight: 700;
 }
+
 .profileSectionLeft>h3 {
     padding-bottom: 5px;
     color: #3e4152;
@@ -26,10 +28,12 @@ li:hover{
     text-overflow: ellipsis;
     font-weight: 700;
 }
-hr{
+
+hr {
     margin: 10px 0px;
     color: #282c3f;
 }
+
 .profileSectionLeft>span {
     color: #44485b;
     font-size: 14px;
@@ -50,6 +54,7 @@ button {
     margin-bottom: 10px;
     cursor: pointer;
 }
-button:hover{
+
+button:hover {
     border-color: #ff3f6c;
 }
