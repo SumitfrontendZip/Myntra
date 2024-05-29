@@ -1,6 +1,7 @@
 import { useState } from "react"
 import MenComponentsList from "../MenComponentsList/MenComponentsList"
 import WomenComponentsLists from "../WomenComponentsList/WomenComponentsLists"
+import KidsComponentsList from "../KidsComponentsList/KidsComponentsList"
 
 function MainMenuItems({ items }) {
 
@@ -13,7 +14,7 @@ function MainMenuItems({ items }) {
         switch (items) {
             case 'MEN': return <MenComponentsList />
             case 'WOMEN': return <WomenComponentsLists />
-            case 'KIDS': return <MenComponentsList />
+            case 'KIDS': return <KidsComponentsList />
             case 'HOME & LIVING': return <MenComponentsList />
             case 'BEAUTY': return <MenComponentsList />
             case 'STUDIO': return <MenComponentsList />
