@@ -1,8 +1,10 @@
 import { useState } from "react"
-import MenComponentsList from "../MenComponentsList/MenComponentsList"
-import WomenComponentsLists from "../WomenComponentsList/WomenComponentsLists"
-import KidsComponentsList from "../KidsComponentsList/KidsComponentsList"
-
+import KidsComponentsList from "../ListComponents/KidsComponentsList/KidsComponentsList"
+import WomenComponentsLists from "../ListComponents/WomenComponentsList/WomenComponentsLists"
+import MenComponentsList from "../ListComponents/MenComponentsList/MenComponentsList"
+import HomeandLiving from "../ListComponents/HomeandLiving/HomeandLiving"
+import BeautyComponentsList from "../ListComponents/BeautyComponentsList/BeautyComponentsList"
+import StudioComponents from "../ListComponents/StudioComponents/StudioComponents"
 function MainMenuItems({ items }) {
 
     const [showMenComponentsList, setShowMenComponentsList] = useState(false)
@@ -15,9 +17,9 @@ function MainMenuItems({ items }) {
             case 'MEN': return <MenComponentsList />
             case 'WOMEN': return <WomenComponentsLists />
             case 'KIDS': return <KidsComponentsList />
-            case 'HOME & LIVING': return <MenComponentsList />
-            case 'BEAUTY': return <MenComponentsList />
-            case 'STUDIO': return <MenComponentsList />
+            case 'HOME & LIVING': return <HomeandLiving />
+            case 'BEAUTY': return <BeautyComponentsList />
+            case 'STUDIO': return <StudioComponents />
 
         }
     }
