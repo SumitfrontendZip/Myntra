@@ -3,7 +3,6 @@
 
 }
 .navProfileItems{
-    cursor: pointer;
     height: 60px;
     display: flex;
     flex-direction: column;
@@ -14,9 +13,11 @@
 }
 .navProfileItems>img{
     width: 20px;
+    cursor: pointer;
 }
 .navProfileItems>span{
     font-size: 12px;
+    cursor: pointer;
     font-weight: 700;
     color: black;
     padding-top: 4px;
