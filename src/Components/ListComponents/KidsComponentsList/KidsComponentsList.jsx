@@ -1,4 +1,4 @@
-import ListItems from "../ListItem/ListItems"
+import ListItems from "../../ListItem/ListItems"
 
 function KidsComponentsList() {
     const boysClothing = ['T-Shirts', 'Shirts', 'Shorts', 'Jeans', 'Trousers', 'Clothing Sets', 'Ethnic Wear', 'Track Pants & Pyjamas', 'Jacket, Sweater & Sweatshirts', 'Party Wear', 'Innerwear & Thermals', 'Nightwear & Loungewear', ' Value Packs']
