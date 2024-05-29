@@ -10,7 +10,7 @@ function MenComponentsList() {
     const Gadgets = ['Smart Wearables', 'Fitness Gadgets', 'Headphones', 'Speakers']
     const Fashion = ['Wallets', 'Belts', 'Perfumes & Body Mists', 'Trimmers', 'Deodorants', 'Ties, Cufflinks & Pocket  Squares', 'Accessory Gifts Sets', 'Caps & Hats', 'Mufflers, Scarves & Gloves', 'Phones Cases', 'Rings & Wristwear', 'Helmets']
     return (
-        <div className='MenComponents'>
+        <div className='Components'>
             <div className="column">
                 <ListItems item={Topwear} itemName="Topwear" />
                 <hr />

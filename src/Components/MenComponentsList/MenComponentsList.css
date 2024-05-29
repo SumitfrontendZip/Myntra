@@ -1,4 +1,4 @@
-.MenComponents {
+.Components {
     position: absolute;
     top: 70px;
     left: 70px;
@@ -9,7 +9,7 @@
     height: 420px;
     background: rgb(255, 255, 255);
     display: flex;
-
+    transition: all 2s ease-in-out;
 }
 
 .CategoriesName {
