@@ -1,0 +1,7 @@
+.cards > img{
+    width: 253px;
+    height: 390px;
+}
+.imagesCard{
+    display: flex;
+}
