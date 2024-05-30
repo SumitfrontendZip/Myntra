@@ -4,7 +4,6 @@
 }
 
 .productSlider {
-    /* width: 253px; */
     overflow: hidden;
 }
 
@@ -24,7 +23,8 @@
     border-radius: 100%;
     margin: 0px 10px;
 }
-.buttons{
+
+.buttons {
     cursor: pointer;
     margin-top: 20px;
     width: 100%;
@@ -32,7 +32,12 @@
     display: flex;
     justify-content: center;
 }
-.show{
+
+.show-hidden{
+    background: white;
+}
+
+.show {
     background: #000;
 }
 
