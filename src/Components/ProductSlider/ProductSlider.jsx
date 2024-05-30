@@ -19,9 +19,9 @@ function ProductSlider() {
             } else {
                 handleSliderChange(slider + 1);
             }
-        }, 3000);
+        }, 30000);
 
-        return () => clearInterval(intervalId); // Cleanup the interval on component unmount
+        return () => clearInterval(intervalId); 
     }, [slider, images.length]);
 
     return (

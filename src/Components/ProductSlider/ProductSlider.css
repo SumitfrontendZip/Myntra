@@ -1,5 +1,5 @@
 .cards>img {
-    width: 253px;
+    width:1/6%;
     height: 390px;
 }
 
@@ -10,6 +10,7 @@
 .imagesCard {
     display: flex;
     overflow: scroll;
+    width: 100vw;
 }
 
 .cards {
