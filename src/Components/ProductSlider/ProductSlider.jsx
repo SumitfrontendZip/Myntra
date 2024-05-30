@@ -1,6 +1,6 @@
 import { image1, image2, image3 } from './ProductSliderImage/ProductSliderImage'
 import './ProductSlider.css'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 function ProductSlider() {
     const [slider, setSlider] = useState(0)
@@ -10,21 +10,31 @@ function ProductSlider() {
     const handleSliderChange = (index) => {
         setSlider(index);
         imageRefs[index].current.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    };
+    }
 
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            if (slider === images.length - 1) {
+                handleSliderChange(0);
+            } else {
+                handleSliderChange(slider + 1);
+            }
+        }, 3000);
 
+        return () => clearInterval(intervalId); // Cleanup the interval on component unmount
+    }, [slider, images.length]);
 
     return (
         <div className='productSlider'>
             <div className="imagesCard">
                 {
-                    images.map((imgArr, idx)=> (
+                    images.map((imgArr, idx) => (
                         <div className="cards" key={idx} ref={imageRefs[idx]}>
                             {imgArr.map((image, index) => (
                                 <img src={image} key={index} />
                             ))}
                         </div>
-                        ))
+                    ))
                 }
             </div>
             <div className="buttons">
