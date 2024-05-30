@@ -20,3 +20,4 @@ import img15 from './slider (15).png'
 export const image1 = [img, img1, img2, img3, img4, img14,];
 export const image2 = [img5, img6, img7, img8, img9, img10,];
 export const image3 = [img11, img12, img13, img1, img14, img15];
+
