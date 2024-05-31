@@ -1,6 +1,6 @@
 import shopCategory from './shopCategory.png'
 import './Category.css'
-import Images from '../CategoryImages/CategoryImages'
+import Images from './CategoryImages/CategoryImages'
 function Category() {
     console.log(Images);
     return (
