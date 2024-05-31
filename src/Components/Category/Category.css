@@ -1,0 +1,17 @@
+.shopCategory{
+    display: flex;
+    justify-content: center;
+}
+.shopCategory>img{
+    width: 500px;
+}
+.categoryCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+.categoryCards > img{
+    width: 200px;
+    margin: 20px;
+}
