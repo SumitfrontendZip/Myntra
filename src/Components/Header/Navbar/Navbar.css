@@ -1,13 +1,38 @@
-nav > img {
+nav>img {
     width: 60px;
     height: 40px;
 }
+
 nav {
-    font-family: Assistant,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0px 50px;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .05);
+}
+
+@media screen and (max-width:1370px) {
+    nav>img {
+        width: 50px;
+        height: 30px;
+    }
+}
+
+.burggerIcon {
+    display: none;
+}
+
+@media screen and (max-width:850px) {
+    .burggerIcon {
+        display: inline;
+    }
+}
+
+@media screen and (max-width:850px) {
+    nav{
+        justify-content: space-around;
+        padding: 0px;
+    }
 }

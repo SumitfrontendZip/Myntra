@@ -15,7 +15,8 @@
     border-radius: 0px 8px 8px 0px;
     outline: none;
 }
-.inputBar > input:focus{
+
+.inputBar>input:focus {
     background: white;
 }
 
@@ -31,4 +32,31 @@
 
 .inputBar>span>img {
     rotate: 270deg;
+}
+
+@media screen and (max-width:1370px) {
+    .inputBar>input {
+        width: 380px;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .inputBar>input {
+        width: 250px;
+    }
+}
+@media screen and (max-width:970px) {
+    .inputBar>input {
+        width: 150px;
+    }
+}
+@media screen and (max-width:850px){
+    .inputBar>input {
+        width: 300px;
+    }
+}
+@media screen and (max-width:475px){
+    .inputBar>input {
+        width: 70%;
+    }
 }
