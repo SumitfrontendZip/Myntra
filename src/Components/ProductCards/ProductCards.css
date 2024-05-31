@@ -1,0 +1,33 @@
+.imgSection>img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+.rating > img{
+    margin: 1px;
+    width: 20px;
+}
+.productImage{
+    z-index: -1;
+}
+.productCard {
+    border-radius: 10px;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    margin: 10px;
+    border: 1px solid rgb(193, 193, 193);
+    cursor: pointer;
+}
+.productCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.card:hover {
+    box-shadow: 0px 0px 10px rgb(194, 194, 194);
+}

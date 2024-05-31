@@ -1,7 +1,3 @@
-import img1 from './001.jpg';
-import img2 from './002.jpg';
-import img3 from './003.jpg';
-import img4 from './004.jpg';
 import img5 from './005.jpg';
 import img6 from './006.jpg';
 import img7 from './007.jpg';
@@ -44,38 +40,6 @@ import img43 from './043.jpg';
 
 
 const CardData = [
-    {
-        img: img1,
-        name: 'Shirt',
-        material: 'Cotton',
-        price: 999,
-        discountPrice: 1499,
-        rating: 4
-    },
-    {
-        img: img2,
-        name: 'Jeans',
-        material: 'Denim',
-        price: 1599,
-        discountPrice: 2199,
-        rating: 5
-    },
-    {
-        img: img3,
-        name: 'Jacket',
-        material: 'Leather',
-        price: 2599,
-        discountPrice: 3299,
-        rating: 4
-    },
-    {
-        img: img4,
-        name: 'Sweater',
-        material: 'Wool',
-        price: 1899,
-        discountPrice: 2499,
-        rating: 3
-    },
     {
         img: img5,
         name: 'Dress',
