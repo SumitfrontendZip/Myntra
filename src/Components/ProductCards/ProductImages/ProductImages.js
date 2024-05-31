@@ -39,6 +39,7 @@ import img42 from './042.jpg';
 import img43 from './043.jpg';
 
 
+
 const CardData = [
     {
         img: img5,
@@ -46,7 +47,8 @@ const CardData = [
         material: 'Silk',
         price: 2099,
         discountPrice: 2999,
-        rating: 5
+        rating: 5,
+        new: false
     },
     {
         img: img6,
@@ -54,7 +56,8 @@ const CardData = [
         material: 'Cotton',
         price: 499,
         discountPrice: 799,
-        rating: 4
+        rating: 4,
+        new: true
     },
     {
         img: img7,
@@ -62,7 +65,8 @@ const CardData = [
         material: 'Polyester',
         price: 999,
         discountPrice: 1499,
-        rating: 3
+        rating: 3,
+        new: false
     },
     {
         img: img8,
@@ -70,7 +74,8 @@ const CardData = [
         material: 'Linen',
         price: 899,
         discountPrice: 1299,
-        rating: 4
+        rating: 4,
+        new: true
     },
     {
         img: img9,
@@ -78,7 +83,8 @@ const CardData = [
         material: 'Cotton',
         price: 699,
         discountPrice: 999,
-        rating: 3
+        rating: 3,
+        new: false
     },
     {
         img: img10,
@@ -86,7 +92,8 @@ const CardData = [
         material: 'Wool',
         price: 1399,
         discountPrice: 1899,
-        rating: 4
+        rating: 4,
+        new: true
     },
     {
         img: img11,
@@ -94,7 +101,8 @@ const CardData = [
         material: 'Wool',
         price: 2999,
         discountPrice: 3999,
-        rating: 5
+        rating: 5,
+        new: false
     },
     {
         img: img12,
@@ -102,7 +110,8 @@ const CardData = [
         material: 'Cotton',
         price: 299,
         discountPrice: 499,
-        rating: 3
+        rating: 3,
+        new: true
     },
     {
         img: img13,
@@ -110,7 +119,8 @@ const CardData = [
         material: 'Cotton',
         price: 799,
         discountPrice: 1199,
-        rating: 4
+        rating: 4,
+        new: false
     },
     {
         img: img14,
@@ -118,7 +128,8 @@ const CardData = [
         material: 'Polyester',
         price: 1199,
         discountPrice: 1699,
-        rating: 4
+        rating: 4,
+        new: true
     },
     {
         img: img15,
@@ -126,7 +137,8 @@ const CardData = [
         material: 'Wool',
         price: 199,
         discountPrice: 299,
-        rating: 3
+        rating: 3,
+        new: false
     },
     {
         img: img16,
@@ -134,7 +146,8 @@ const CardData = [
         material: 'Spandex',
         price: 599,
         discountPrice: 899,
-        rating: 4
+        rating: 4,
+        new: true
     },
     {
         img: img17,
@@ -142,7 +155,8 @@ const CardData = [
         material: 'Silk',
         price: 399,
         discountPrice: 599,
-        rating: 4
+        rating: 4,
+        new: false
     },
     {
         img: img18,
@@ -150,7 +164,8 @@ const CardData = [
         material: 'Leather',
         price: 699,
         discountPrice: 999,
-        rating: 5
+        rating: 5,
+        new: true
     },
     {
         img: img19,
@@ -158,7 +173,8 @@ const CardData = [
         material: 'Wool',
         price: 499,
         discountPrice: 799,
-        rating: 4
+        rating: 4,
+        new: false
     },
     {
         img: img20,
@@ -166,7 +182,8 @@ const CardData = [
         material: 'Wool',
         price: 4999,
         discountPrice: 5999,
-        rating: 5
+        rating: 5,
+        new: true
     },
     {
         img: img21,
@@ -174,7 +191,8 @@ const CardData = [
         material: 'Linen',
         price: 1999,
         discountPrice: 2599,
-        rating: 4
+        rating: 4,
+        new: false
     },
     {
         img: img22,
@@ -182,7 +200,8 @@ const CardData = [
         material: 'Polyester',
         price: 999,
         discountPrice: 1499,
-        rating: 3
+        rating: 3,
+        new: true
     },
     {
         img: img23,
@@ -190,7 +209,8 @@ const CardData = [
         material: 'Leather',
         price: 499,
         discountPrice: 699,
-        rating: 4
+        rating: 4,
+        new: false
     },
     {
         img: img24,
@@ -198,7 +218,8 @@ const CardData = [
         material: 'Cotton',
         price: 299,
         discountPrice: 499,
-        rating: 4
+        rating: 4,
+        new: true
     },
     {
         img: img25,
@@ -206,7 +227,8 @@ const CardData = [
         material: 'Wool',
         price: 399,
         discountPrice: 599,
-        rating: 4
+        rating: 4,
+        new: false
     },
     {
         img: img26,
@@ -214,7 +236,8 @@ const CardData = [
         material: 'Silk',
         price: 299,
         discountPrice: 499,
-        rating: 3
+        rating: 3,
+        new: true
     },
     {
         img: img27,
@@ -222,7 +245,8 @@ const CardData = [
         material: 'Silk',
         price: 399,
         discountPrice: 599,
-        rating: 4
+        rating: 4,
+        new: false
     },
     {
         img: img28,
@@ -230,7 +254,8 @@ const CardData = [
         material: 'Cotton',
         price: 199,
         discountPrice: 299,
-        rating: 3
+        rating: 3,
+        new: true
     },
     {
         img: img29,
@@ -238,7 +263,8 @@ const CardData = [
         material: 'Polyester',
         price: 499,
         discountPrice: 699,
-        rating: 4
+        rating: 4,
+        new: false
     },
     {
         img: img30,
@@ -246,7 +272,8 @@ const CardData = [
         material: 'Denim',
         price: 1999,
         discountPrice: 2599,
-        rating: 4
+        rating: 4,
+        new: true
     },
     {
         img: img31,
@@ -254,7 +281,8 @@ const CardData = [
         material: 'Wool',
         price: 1199,
         discountPrice: 1699,
-        rating: 4
+        rating: 4,
+        new: false
     },
     {
         img: img32,
@@ -262,7 +290,8 @@ const CardData = [
         material: 'Silk',
         price: 599,
         discountPrice: 899,
-        rating: 4
+        rating: 4,
+        new: true
     },
     {
         img: img33,
@@ -270,7 +299,8 @@ const CardData = [
         material: 'Silk',
         price: 2999,
         discountPrice: 3999,
-        rating: 5
+        rating: 5,
+        new: false
     },
     {
         img: img34,
@@ -278,7 +308,8 @@ const CardData = [
         material: 'Cotton',
         price: 1299,
         discountPrice: 1799,
-        rating: 4
+        rating: 4,
+        new: true
     },
     {
         img: img35,
@@ -286,7 +317,8 @@ const CardData = [
         material: 'Cotton',
         price: 999,
         discountPrice: 1499,
-        rating: 4
+        rating: 4,
+        new: false
     },
     {
         img: img36,
@@ -294,7 +326,8 @@ const CardData = [
         material: 'Cotton',
         price: 799,
         discountPrice: 1199,
-        rating: 4
+        rating: 4,
+        new: true
     },
     {
         img: img37,
@@ -302,7 +335,8 @@ const CardData = [
         material: 'Silk',
         price: 1199,
         discountPrice: 1699,
-        rating: 4
+        rating: 4,
+        new: false
     },
     {
         img: img38,
@@ -310,7 +344,8 @@ const CardData = [
         material: 'Wool',
         price: 499,
         discountPrice: 699,
-        rating: 4
+        rating: 4,
+        new: true
     },
     {
         img: img39,
@@ -318,7 +353,8 @@ const CardData = [
         material: 'Nylon',
         price: 999,
         discountPrice: 1499,
-        rating: 4
+        rating: 4,
+        new: false
     },
     {
         img: img40,
@@ -326,7 +362,8 @@ const CardData = [
         material: 'Cotton',
         price: 599,
         discountPrice: 899,
-        rating: 4
+        rating: 4,
+        new: true
     },
     {
         img: img41,
@@ -334,7 +371,8 @@ const CardData = [
         material: 'Polyester',
         price: 1999,
         discountPrice: 2599,
-        rating: 4
+        rating: 4,
+        new: false
     },
     {
         img: img42,
@@ -342,7 +380,8 @@ const CardData = [
         material: 'Nylon',
         price: 1499,
         discountPrice: 1999,
-        rating: 4
+        rating: 4,
+        new: true
     },
     {
         img: img43,
@@ -350,8 +389,11 @@ const CardData = [
         material: 'Cotton',
         price: 1199,
         discountPrice: 1699,
-        rating: 3
+        rating: 3,
+        new: false
     }
 ];
+
+
 
 export default CardData;

@@ -1,11 +1,17 @@
 import CardData from "./ProductImages/ProductImages";
 import './ProductCards.css'
 import star from './star.png'
+import newIcon from './new.png'
 function ProductCards() {
 
     const card = (card, idx) => {
         return (
             <div className="productCard" key={idx}>
+                {
+                    card.new && (
+                        <img src={newIcon} alt="newIcon" className="newIcon"  />
+                    )
+                }
                 <div className="imgSection">
                     <img src={card.img} alt="Card image cap" className="productImage" />
                 </div>
