@@ -14,7 +14,7 @@ function ProductCards() {
                 <div className="priceSection">
                     <span className="price">₹{card.price}</span>
                     <span className="discountedPrice">₹{card.discountPrice}</span>
-                    <span className="totalOff">{Math.floor((card.price / card.discountPrice) * 100)}%</span>
+                    <span className="totalOff">({Math.floor((card.price / card.discountPrice) * 100)}%)</span>
                 </div>
                 <span className="rating">
                     {
