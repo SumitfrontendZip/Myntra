@@ -4,6 +4,7 @@ nav>img {
 }
 
 nav {
+    z-index: 22;
     position: fixed;
     top: 0px;
     right: 0px;

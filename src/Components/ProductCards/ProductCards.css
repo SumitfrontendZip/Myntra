@@ -13,6 +13,7 @@
 }
 
 .productCard {
+    /* z-index: -1; */
     position: relative;
     border-radius: 10px;
     width: 270px;
