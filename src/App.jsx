@@ -9,10 +9,10 @@ function App() {
 
   return (
     <>
-      {/* <Navbar />
+      <Navbar />
       <ProductSlider />
       <Category/>
-      <ProductCards/> */}
+      <ProductCards/>
       <Filter/>
     </>
   )
