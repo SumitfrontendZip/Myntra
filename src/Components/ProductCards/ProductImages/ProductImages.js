@@ -39,7 +39,6 @@ import img42 from './042.jpg';
 import img43 from './043.jpg';
 
 
-
 const CardData = [
     {
         "img": img5,
@@ -471,6 +470,4 @@ const CardData = [
         "brand": "BrandE"
     }
 ];
-
-
 export default CardData

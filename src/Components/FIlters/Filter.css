@@ -1,14 +1,30 @@
-.filter{
-    border: 1px solid black;
+.filter {
     width: 20vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
-.Range{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.filter > span {
+    
+}
+.filterContainer {
+    border: 1px solid rgb(202, 202, 202);
+}
+
+.CatrgoiesName {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 10px 0px;
+}
+.items > label {
+    margin-left: 20px;
+}
+.items  {
+    margin: 4px 0px;
+    margin-left: 20px;
+    font-size: 15px;
+    color: rgb(83, 83, 83);
+}
+.filterItems{
+    border-bottom: 1px solid rgb(202, 202, 202);
 }
