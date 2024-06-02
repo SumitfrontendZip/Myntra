@@ -44,7 +44,7 @@ const CardData = [
         "img": img5,
         "name": "Dress",
         "material": "Silk",
-        "price": 2099,
+        "price": 499,
         "discountPrice": 2999,
         "rating": 5,
         "new": false,

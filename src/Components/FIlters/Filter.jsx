@@ -1,23 +1,22 @@
 import './Filter.css'
+ 
+function Filter({ colors, brands, price , handleChangeColor , handleChangeBrand , handleChangePrice}) {
 
-function Filter() {
+    const handleChangeItem = (type, item) => {
+        const handlers = {
+            color: handleChangeColor,
+            brand: handleChangeBrand,
+            price: handleChangePrice,
+        };
+        handlers[type](item);
+    };
 
-    const colors = ['Red', 'Blue', 'Green', 'Yellow', 'Black', 'White', 'Pink', 'Purple', 'Gray', 'Brown'];
-    const brands = ['BrandA', 'BrandB', 'BrandC', 'BrandD', 'BrandE', 'BrandF', 'BrandG', 'BrandH', 'BrandI', 'BrandJ'];
-    const price = [
-        { min: 0, max: 500 },
-        { min: 501, max: 999 },
-        { min: 1000, max: 5000 },
-        { min: 5001, max: '5001+' }
-    ]
-
-
-    const items = (itemsData) => {
+    const items = (type , itemsData) => {
 
         if (itemsData === price) {
             return itemsData.map((item, index) => (
                 <div className="items" key={index}>
-                    <input type="checkbox" />
+                    <input type="checkbox" onChange={() => handleChangeItem(type, item)}/>
                     <label>{item.min} to {item.max}</label>
                 </div>
             ));
@@ -25,7 +24,7 @@ function Filter() {
 
         return itemsData.map((item, index) => (
             <div className='items' key={index}>
-                <input type="checkbox" name={item} id={item} />
+                <input type="checkbox" onChange={() => handleChangeItem(type, item)}/>
                 <label htmlFor={item}>{item}</label>
             </div>
         ));
@@ -39,23 +38,24 @@ function Filter() {
                 <div className="CatrgoiesName">Color</div>
                 <div className="filterItems">
                     {
-                        items(colors)
+                        items('color',colors)
                     }
                 </div>
                 <div className="CatrgoiesName">Brand</div>
                 <div className="filterItems">
                     {
-                        items(brands)
+                        items('brand',brands)
                     }
                 </div>
                 <div className="CatrgoiesName">Price</div>
                 <div className="filterItems">
                     {
-                        items(price)
+                        items('price',price)
                     }
                 </div>
             </div>
         </div>
     )
 }
+
 export default Filter;

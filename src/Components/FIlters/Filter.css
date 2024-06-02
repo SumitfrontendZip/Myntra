@@ -1,14 +1,14 @@
 .filter {
-    width: 20vw;
+    width: 10vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    border: 1px solid rgb(170, 170, 170);
+    padding-left: 4px;
 }
-.filter > span {
-    
-}
-.filterContainer {
-    border: 1px solid rgb(202, 202, 202);
+
+.filter>span {
+    font-size: 2rem;
 }
 
 .CatrgoiesName {
@@ -16,15 +16,14 @@
     font-size: 1.5rem;
     margin: 10px 0px;
 }
-.items > label {
+
+.items>label {
     margin-left: 20px;
 }
-.items  {
+
+.items {
     margin: 4px 0px;
     margin-left: 20px;
     font-size: 15px;
-    color: rgb(83, 83, 83);
-}
-.filterItems{
-    border-bottom: 1px solid rgb(202, 202, 202);
+    color: rgb(153, 153, 153);
 }
