@@ -51,17 +51,17 @@ function App() {
   }
 
   useEffect(() => {
-    if(brandChange.length>0) setProductData([...brandChange])
-    if(colorChange.length>0) setProductData([...colorChange])
-    if(priceChange.length>0) setProductData([...priceChange])
-  }, [brandChange , colorChange , priceChange])
-  
+    if (brandChange.length > 0) setProductData([...brandChange])
+    if (colorChange.length > 0) setProductData([...colorChange])
+    if (priceChange.length > 0) setProductData([...priceChange])
+  }, [brandChange, colorChange, priceChange])
+
 
   return (
     <>
-      {/* <Navbar />
-            <ProductSlider />
-            <Category /> */}
+      <Navbar />
+      <ProductSlider />
+      <Category />
       <div className="productFilter">
         <Filter
           colors={colors}
