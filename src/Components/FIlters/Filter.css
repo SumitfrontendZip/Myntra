@@ -1,0 +1,29 @@
+.filter {
+    width: 10vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(170, 170, 170);
+    padding-left: 4px;
+}
+
+.filter>span {
+    font-size: 2rem;
+}
+
+.CatrgoiesName {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 10px 0px;
+}
+
+.items>label {
+    margin-left: 20px;
+}
+
+.items {
+    margin: 4px 0px;
+    margin-left: 20px;
+    font-size: 15px;
+    color: rgb(153, 153, 153);
+}

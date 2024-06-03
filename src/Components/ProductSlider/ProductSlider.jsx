@@ -8,7 +8,7 @@ function ProductSlider() {
     const imageRefs = images.map(() => useRef())
 
     const handleSliderChange = (index) => {
-        setSlider(index);
+        setSlider(index)
         imageRefs[index].current.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
