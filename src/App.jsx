@@ -30,6 +30,8 @@ function App() {
   const [priceChange, setPriceChange] = useState([])
 
   const handleChangeColor = (item) => {
+    console.log(item);
+    if (item === 'All') return setColorChange([...CardData])
     let newValue = CardData.filter((prevData) => {
       return item === prevData.color
     })
@@ -37,6 +39,7 @@ function App() {
   }
 
   const handleChangeBrand = (item) => {
+    if (item === 'All') return setBrandChange([...CardData])
     let newValue = CardData.filter((prevData) => {
       return item === prevData.brand
     })
