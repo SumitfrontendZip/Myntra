@@ -30,6 +30,8 @@ function App() {
   const [priceChange, setPriceChange] = useState([])
 
   const handleChangeColor = (item) => {
+    console.log(item);
+    if (item === 'All') return setColorChange([...CardData])
     let newValue = CardData.filter((prevData) => {
       return item === prevData.color
     })
@@ -37,6 +39,7 @@ function App() {
   }
 
   const handleChangeBrand = (item) => {
+    if (item === 'All') return setBrandChange([...CardData])
     let newValue = CardData.filter((prevData) => {
       return item === prevData.brand
     })
@@ -51,17 +54,17 @@ function App() {
   }
 
   useEffect(() => {
-    if(brandChange.length>0) setProductData([...brandChange])
-    if(colorChange.length>0) setProductData([...colorChange])
-    if(priceChange.length>0) setProductData([...priceChange])
-  }, [brandChange , colorChange , priceChange])
-  
+    if (brandChange.length > 0) setProductData([...brandChange])
+    if (colorChange.length > 0) setProductData([...colorChange])
+    if (priceChange.length > 0) setProductData([...priceChange])
+  }, [brandChange, colorChange, priceChange])
+
 
   return (
     <>
-      {/* <Navbar />
-            <ProductSlider />
-            <Category /> */}
+      <Navbar />
+      <ProductSlider />
+      <Category />
       <div className="productFilter">
         <Filter
           colors={colors}
