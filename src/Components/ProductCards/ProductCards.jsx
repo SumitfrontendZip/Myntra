@@ -1,7 +1,7 @@
 import './ProductCards.css'
 import star from './star.png'
 import newIcon from './new.png'
-function ProductCards({CardData}) {
+function ProductCards({ CardData }) {
     const card = (card, idx) => {
         return (
             <div className="productCard" key={idx}>
@@ -18,7 +18,7 @@ function ProductCards({CardData}) {
                 <div className="priceSection">
                     <span className="price">₹{card.price}</span>
                     <span className="discountedPrice">₹{card.discountPrice}</span>
-                    <span className="totalOff">({Math.floor((card.price / card.discountPrice) * 100)}%)</span>
+                    <span className="totalOff">({Math.floor((card.discountPrice - card.price) / (card.discountPrice) * 100)}%)</span>
                 </div>
                 <span className="rating">
                     {
