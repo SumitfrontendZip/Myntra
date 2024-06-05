@@ -21,7 +21,7 @@ function CardInfo() {
                 <div className="priceSection">
                     <span className="price">₹{CardData[0].price}</span>
                     <span className="discountedPrice">₹{CardData[0].discountPrice}</span>
-                    <span className="totalOff">({Math.floor((CardData[0].price / CardData[0].discountPrice) * 100)}%)</span>
+                    <span className="totalOff">({Math.floor((CardData[0].discountPrice-CardData[0].price ) /( CardData[0].discountPrice) * 100)}%)</span>
                 </div>
                 <span className="Color">Color : {CardData[0].color} </span>
                 <span className="selectSize">SELECT SIZE</span>
