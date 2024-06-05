@@ -56,13 +56,13 @@ function Filter({ colors, brands, price, handleChangeColor, handleChangeBrand, h
                 <div className="CatrgoiesName">Color</div>
                 <div className="filterItems">
                     {
-                        items('color', ['All' , ...colors])
+                        items('color', ['All', ...colors])
                     }
                 </div>
                 <div className="CatrgoiesName">Brand</div>
                 <div className="filterItems">
                     {
-                        items('brand', ['All' , ...brands])
+                        items('brand', ['All', ...brands])
                     }
                 </div>
                 <div className="CatrgoiesName">Price</div>
