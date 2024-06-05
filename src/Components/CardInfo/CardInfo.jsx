@@ -3,6 +3,7 @@ import star from './star.png'
 import heart from './heart.png'
 import bag from './bag.png'
 import './CardInfo.css'
+import bus from './bus.png'
 function CardInfo() {
     return (
         <div className="card-Container">
@@ -42,6 +43,12 @@ function CardInfo() {
                         <span>WHISLIST</span>
                     </button>
                 </div>
+                <span className="deliveryText">DELIVERY OPTIONS <img src={bus} alt="bus" className="busIcon" /></span>
+                <div className="delivaryOptions">
+                    <input type="text" />
+                    <span>check</span>
+                </div>
+                <span className="deliveryPinText">Please enter PIN code to check delivery time & Pay on Delivery Availability</span>
             </div>
         </div>
     )

@@ -79,3 +79,40 @@
     width: 20px;
     margin-right: 10px;
 }
+.busIcon{
+    width: 30px;
+    margin-left: 10px;
+}
+.deliveryText{
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: normal;
+    align-items: center;
+    margin: 20px 0px 10px 0px;
+    font-weight: 700;
+}
+.delivaryOptions{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px 0px;
+}
+.delivaryOptions > input{
+    width: 250px;
+    height: 30px;
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 10px;
+    outline: none;
+    padding: 4px 10px;
+}
+.delivaryOptions > span{
+    position: absolute;
+    left: 210px;
+    color: red;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.deliveryPinText{
+    color: rgb(141, 141, 141);
+}
