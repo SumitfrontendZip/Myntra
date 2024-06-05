@@ -6,6 +6,7 @@ import Filter from './Components/FIlters/Filter';
 import Navbar from './Components/Header/Navbar/Navbar';
 import ProductCards from './Components/ProductCards/ProductCards';
 import ProductSlider from './Components/ProductSlider/ProductSlider';
+import CardInfo from './Components/CardInfo/CardInfo';
 
 function App() {
   const getUniqueVal = (property) => {
@@ -63,7 +64,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <ProductSlider />
+      {/* <ProductSlider />
       <Category />
       <div className="productFilter">
         <Filter
@@ -75,7 +76,8 @@ function App() {
           handleChangePrice={handleChangePrice}
         />
         <ProductCards CardData={productData} />
-      </div>
+      </div> */}
+      <CardInfo/>
     </>
   );
 }
