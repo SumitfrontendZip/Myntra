@@ -1,7 +1,81 @@
-.card-Container{
+.card-Container {
     display: flex;
     margin-top: 80px;
+    justify-items: center;
+    align-items: center;
 }
-.card-Container > img{
+.ImgSection{
+    width: 50vw;
+}
+.ImgSection>img {
     width: 700px;
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.brandName {
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin: 5px 0px;
+}
+
+.name {
+    margin: 5px 0px;
+    color: rgb(161, 161, 161);
+}
+
+.card-details>.rating>img {
+    margin: 5px 0px;
+    width: 30px;
+}
+
+.card-details>.priceSection {
+    margin: 5px 0px;
+    justify-content: normal;
+    font-size: 1.8rem;
+}
+
+.card-details>.priceSection>.discountedPrice {
+    font-size: 1.4rem;
+}
+.card-details>.priceSection>.totalOff{
+    font-size: 1.3rem;
+}
+.Color{
+    font-size: 1.3rem;
+    margin: 15px 0px;
+    color: rgb(137, 137, 137);
+}
+.size {
+    border: 1px solid rgb(161, 161, 161);
+    border-radius: 100%;
+    padding: 15px;
+    cursor: pointer;
+    margin: 0px 8px;
+    font-weight: 700;
+}
+.sizeChart{
+    margin: 30px 0px;
+    color: rgb(48, 45, 45);
+}
+.selectSize{
+    color: rgb(137, 137, 137);
+}
+.buttons{
+    display: flex;
+    justify-content: normal;
+    align-items: center;
+}
+.buttons > button{
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons > button > img {
+    width: 20px;
+    margin-right: 10px;
 }
