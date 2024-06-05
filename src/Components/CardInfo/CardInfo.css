@@ -1,0 +1,7 @@
+.card-Container{
+    display: flex;
+    margin-top: 80px;
+}
+.card-Container > img{
+    width: 700px;
+}
