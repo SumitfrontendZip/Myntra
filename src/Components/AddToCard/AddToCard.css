@@ -1,0 +1,9 @@
+.addToCard{
+    margin-top: 80px;
+    display: flex;
+}
+.deliverySection{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}

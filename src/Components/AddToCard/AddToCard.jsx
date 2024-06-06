@@ -1,10 +1,10 @@
-
+import './AddToCard.css'
 export const AddToCard = () => {
     return (
-        <>
+        <div className='addToCard'>
             <section>
                 <div className="deliverySection">
-                    <span>Deliver to :{ }</span>
+                    <span>Deliver to : <span className='deliveryCode'>{ 244001}</span></span>
                     <button>Change Address</button>
                 </div>
                 <div className="offerSection">
@@ -49,7 +49,37 @@ export const AddToCard = () => {
                     </div>
                 </div>
             </section>
-            <section></section>
-        </>
+            <section>
+                <span>COUPONS</span>
+                <span className="coupoundApply">
+                    <img src="" alt="" />
+                    <span>Apply Coupons</span>
+                    <button>APPLY</button>
+                </span>
+                <hr />
+                <div className="bill">
+                    <div className="billList">
+                        <span>Total MRP</span>
+                        <span>Discount on MRP</span>
+                        <span>Coupon Discount</span>
+                        <span>Platform Fee </span>
+                        <span>Shipping Fee</span>
+                    </div>
+                    <div className="billValue">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <hr />
+                <div className="amount">
+                    <span>Total Amount</span>
+                    <span>546</span>
+                </div>
+                <button>Place Order</button>
+            </section>
+        </div>
     )
 }
