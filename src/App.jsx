@@ -12,7 +12,7 @@ function App() {
       element:<Home/>
     },
     {
-      path:"/sum",
+      path:"/:brand/:name",
       element:<CardInfo/>
     }
   ])
