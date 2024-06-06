@@ -3,6 +3,7 @@ import Navbar from './Components/Header/Navbar/Navbar';
 import CardInfo from './Components/CardInfo/CardInfo';
 import { Home } from './Components/Home/Home';
 import { createBrowserRouter , RouterProvider } from 'react-router-dom';
+import { AddToCard } from './Components/AddToCard/AddToCard';
 
 function App() {
 
@@ -21,7 +22,8 @@ function App() {
   return (
     <>
       <Navbar />
-      <RouterProvider router={router}/>
+      {/* <RouterProvider router={router}/> */}
+      <AddToCard/>
     </>
   );
 }

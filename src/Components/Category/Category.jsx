@@ -2,7 +2,7 @@ import shopCategory from './shopCategory.png'
 import './Category.css'
 import Images from './CategoryImages/CategoryImages'
 function Category() {
-     
+      
     return (
         <div>
             <div className="shopCategory">
