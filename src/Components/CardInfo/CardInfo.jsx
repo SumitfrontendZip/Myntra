@@ -4,7 +4,9 @@ import heart from './heart.png'
 import bag from './bag.png'
 import './CardInfo.css'
 import bus from './bus.png'
+import { useParams } from "react-router-dom";
 function CardInfo() {
+    const params = useParams()
     return (
         <div className="card-Container">
             <span className="ImgSection"><img src={CardData[0].img} alt="" /></span>
