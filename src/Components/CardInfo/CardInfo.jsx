@@ -4,27 +4,33 @@ import heart from './heart.png'
 import bag from './bag.png'
 import './CardInfo.css'
 import bus from './bus.png'
+import { useParams } from "react-router-dom";
 function CardInfo() {
+
+    const {brand , name} = useParams();
+    const card = CardData.find(card=>card.brand === brand && card.name === name)
+
+    if(!card) return <div>Product Not Found</div>
 
     return (
         <div className="card-Container">
-            <span className="ImgSection"><img src={CardData[0].img} alt="" /></span>
+            <span className="ImgSection"><img src={card.img} alt="" /></span>
             <div className="card-details">
-                <span className="brandName">{CardData[0].brand}</span>
-                <span className="name">{CardData[0].name}</span>
+                <span className="brandName">{card.brand}</span>
+                <span className="name">{card.name}</span>
                 <span className="rating">
                     {
-                        Array.from({ length: CardData[0].rating }).map((_, index) => (
+                        Array.from({ length: card.rating }).map((_, index) => (
                             <img src={star} alt="star" key={index} />
                         ))
                     }
                 </span>
                 <div className="priceSection">
-                    <span className="price">₹{CardData[0].price}</span>
-                    <span className="discountedPrice">₹{CardData[0].discountPrice}</span>
-                    <span className="totalOff">({Math.floor((CardData[0].discountPrice - CardData[0].price) / (CardData[0].discountPrice) * 100)}%)</span>
+                    <span className="price">₹{card.price}</span>
+                    <span className="discountedPrice">₹{card.discountPrice}</span>
+                    <span className="totalOff">({Math.floor((card.discountPrice - card.price) / (card.discountPrice) * 100)}%)</span>
                 </div>
-                <span className="Color">Color : {CardData[0].color} </span>
+                <span className="Color">Color : {card.color} </span>
                 <span className="selectSize">SELECT SIZE</span>
                 <div className="sizeChart">
                     <span className="size">36</span>
