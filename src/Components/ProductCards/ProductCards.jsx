@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 function ProductCards({ CardData }) {
     const card = (card, idx) => {
         return (
-            <Link to='/sum'>
-                <div className="productCard" key={idx}>
+            <Link to={`/${card.brand}/${card.name}`} key={idx}>
+                <div className="productCard"  >
                     {
                         card.new && (
                             <img src={newIcon} alt="newIcon" className="newIcon" />

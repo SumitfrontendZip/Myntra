@@ -4,9 +4,8 @@ import heart from './heart.png'
 import bag from './bag.png'
 import './CardInfo.css'
 import bus from './bus.png'
-import { useParams } from "react-router-dom";
 function CardInfo() {
-    const params = useParams()
+
     return (
         <div className="card-Container">
             <span className="ImgSection"><img src={CardData[0].img} alt="" /></span>
@@ -23,7 +22,7 @@ function CardInfo() {
                 <div className="priceSection">
                     <span className="price">₹{CardData[0].price}</span>
                     <span className="discountedPrice">₹{CardData[0].discountPrice}</span>
-                    <span className="totalOff">({Math.floor((CardData[0].discountPrice-CardData[0].price ) /( CardData[0].discountPrice) * 100)}%)</span>
+                    <span className="totalOff">({Math.floor((CardData[0].discountPrice - CardData[0].price) / (CardData[0].discountPrice) * 100)}%)</span>
                 </div>
                 <span className="Color">Color : {CardData[0].color} </span>
                 <span className="selectSize">SELECT SIZE</span>
