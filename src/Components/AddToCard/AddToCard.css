@@ -40,7 +40,7 @@ section:first-child {
 section {
     width: 320px;
     margin: 0px 10px;
-    padding-right: 10px;
+    padding: 30px 10px;
 }
 
 section:first-child {
@@ -238,6 +238,8 @@ section>span {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid rgb(196, 196, 196);
+    padding-bottom: 10px;
 }
 
 .billList>span {
@@ -246,8 +248,26 @@ section>span {
     color: rgb(148, 148, 148);
     margin: 5px 0px;
 }
-.priceTag{
+
+.priceTag {
     margin: 10px 0px;
     font-weight: 700;
     font-size: 14px;
+}
+
+.amount {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+section>button {
+    width: 100%;
+    background: #ff8484;
+    color: white;
+    border-radius: 5px;
+}
+
+section>button:hover {
+    background: #f97676;
 }
