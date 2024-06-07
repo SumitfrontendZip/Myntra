@@ -6,12 +6,11 @@ import './CardInfo.css'
 import bus from './bus.png'
 import { useParams } from "react-router-dom";
 import { useState } from "react";
-function CardInfo({handleAddToCardButton}) {
+function CardInfo({ handleAddToCardButton }) {
 
-    const [size , setSize] = useState(36)
-    const [color ,setColor] = useState('white')
-
-    const sizeChat = [36,38,40,42,44,46]
+    const [size, setSize] = useState(undefined)
+ 
+    const sizeChat = [36, 38, 40, 42, 44, 46]
 
     const { brand, name } = useParams();
     const card = CardData.find(card => card.brand === brand && card.name === name)
@@ -20,9 +19,8 @@ function CardInfo({handleAddToCardButton}) {
 
     const handleItemClick = (val) => {
         setSize(val);
-        setColor('black');
     };
-   
+
     return (
         <div className="card-Container">
             <span className="ImgSection"><img src={card.img} alt="" /></span>
@@ -45,11 +43,11 @@ function CardInfo({handleAddToCardButton}) {
                 <span className="selectSize">SELECT SIZE</span>
                 <div className="sizeChart">
                     {
-                        sizeChat.map((val,idx)=>(<span className="size" key={idx} onClick={()=>(handleItemClick(val))}>{val}</span>))
+                        sizeChat.map((val, idx) => (<span className="size" key={idx} style={val===size ? {background:'rgb(243, 91, 91)'} : {background:'white'} } onClick={() => (handleItemClick(val))}>{val}</span>))
                     }
                 </div>
                 <div className="buttons">
-                    <button onClick={()=>handleAddToCardButton(card,size)}>
+                    <button onClick={() => handleAddToCardButton(card, size)}>
                         <img src={bag} alt="" />
                         <span>ADD TO BAG</span>
                     </button>

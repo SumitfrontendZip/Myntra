@@ -9,7 +9,7 @@ function App() {
 
   let addToCardData = JSON.parse(localStorage.getItem('addToCardData')) || [];
 
-  const handleAddToCardButton = (card , size) => {
+  const handleAddToCardButton = (card , size=36) => {
     console.log(size);
     const existingCard = addToCardData.find(data => data.card.brand === card.brand && data.size === size && data.card.name === card.name)
 

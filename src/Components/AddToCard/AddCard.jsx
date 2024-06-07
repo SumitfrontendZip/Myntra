@@ -1,8 +1,6 @@
-import CardData from '../ProductImages/ProductImages'
 
 export const AddCard = ({ card, size }) => {
-    console.log(card);
-
+ 
     const sizeChart = [36, 38, 40, 42, 44, 46]
     const defaultSize = sizeChart.includes(size) ? size : 'SIZE';
     const qtyOption = [1, 2, 3, 4, 5];

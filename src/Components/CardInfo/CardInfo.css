@@ -52,7 +52,7 @@
 .size {
     border: 1px solid rgb(161, 161, 161);
     border-radius: 100%;
-    padding: 15px;
+    padding: 10px;
     cursor: pointer;
     margin: 0px 8px;
     font-weight: 700;
@@ -116,3 +116,4 @@
 .deliveryPinText{
     color: rgb(141, 141, 141);
 }
+ 

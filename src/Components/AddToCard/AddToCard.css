@@ -248,7 +248,16 @@ section>span {
     color: rgb(148, 148, 148);
     margin: 5px 0px;
 }
-
+.billList:nth-child(2){
+    align-items: end;
+}
+.billList{
+    display: flex;
+    flex-direction: column;
+}
+.billList:nth-child(2)>span:nth-child(3){
+    color: rgb(255, 26, 26);
+}
 .priceTag {
     margin: 10px 0px;
     font-weight: 700;
