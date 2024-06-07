@@ -1,9 +1,196 @@
-.addToCard{
-    margin-top: 80px;
+.addToCard {
+    margin-top: 100px;
     display: flex;
+    justify-content: center;
+    font-family: sans-serif;
 }
-.deliverySection{
+
+.deliverySection {
+    font-size: 14px;
+    margin-bottom: 8px;
+    background-color: #fff6f4;
+    padding: 5px 16px;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
+    border-radius: 4px;
+    border: 1px solid #eaeaec;
+    cursor: pointer;
+    color: rgb(138, 138, 138);
+}
+
+.deliverySection>button {
+    font-size: 12px;
+    padding: 8px 16px;
+    border: 1px solid #ff3f6c;
+    border-radius: 4px;
+    margin-right: 0;
+    font-weight: 700;
+}
+
+.deliveryCode {
+    font-weight: 700;
+    color: black;
+}
+
+section:first-child {
+    border-right: 1px solid rgb(184, 184, 184);
+}
+
+section {
+    width: 320px;
+    margin: 0px 10px;
+    padding-right: 10px;
+}
+
+section:first-child {
+    width: 600px;
+}
+
+.offerSection {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    border: 1px solid #eaeaec;
+}
+
+.offerSection>span>img {
+    width: 20px;
+    margin-right: 20px;
+}
+
+.offerSection>span:first-child {
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+}
+
+.offerSection>span {
+    font-size: 13px;
+    margin: 0px 0px 0px 10px;
+    color: rgb(101, 101, 101);
+    font-weight: 100;
+}
+
+.removeSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5px;
+}
+
+.removeSection>span>input {
+    margin-right: 10px;
+}
+
+.removeSection>span>label {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.removeSection>span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.remove:first-child {
+    border-right: 1px solid rgb(224, 224, 224);
+}
+
+.remove {
+    padding: 0px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: rgb(116, 75, 75);
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.productImage>img {
+    width: 120px;
+}
+
+.placeOrderCard {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(213, 213, 213);
+    padding: 15px 10px;
+    border-radius: 4px;
+    height: 130px;
+    position: relative;
+}
+
+.productImage {
+    position: relative;
+}
+
+.productImage>input {
+    position: absolute;
+    top: -15px;
+    left: 0px;
+    z-index: 1;
+}
+
+.productImage>img {
+    z-index: -1;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardName {
+    font-weight: 700;
+    margin: 5px 0px;
+}
+
+.cardBrandName,
+.cardColor {
+    font-size: 12px;
+    color: rgb(161, 161, 161);
+    margin: 4px 0px;
+}
+
+.card {
+    margin:5px 10px 5px 0px;
+    background: #efeded;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.cardContent>.priceSection {
+    justify-content: normal;
+    margin: 4px 0px;
+    font-size: 14px;
+}
+
+.returnContent {
+    margin-left: 5px;
+    font-size: 12px;
+}
+.returnContent>span>span{
+    font-weight: 700;
+}
+.cross{
+    rotate:calc(45deg);
+    font-size: 2rem;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.wrapCards{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
