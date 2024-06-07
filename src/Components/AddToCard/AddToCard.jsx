@@ -1,6 +1,7 @@
 import './AddToCard.css'
 import { AddCard } from './AddCard'
 import discountIcon from './discount.png'
+import offerIcon from './offer.png'
 
 export const AddToCard = () => {
     return (
@@ -31,11 +32,15 @@ export const AddToCard = () => {
             <section>
                 <span>COUPONS</span>
                 <span className="coupoundApply">
-                    <img src="" alt="" />
+                    <img src={offerIcon} alt="" />
                     <span>Apply Coupons</span>
                     <button>APPLY</button>
                 </span>
-                <hr />
+                <div className="couponsDesc">
+                    <span>Login</span>
+                    <span> to get upto 500 OFF on first order.</span>
+                </div>
+                <div className='priceTag'>PRICE DETAILS {2} ITEMS</div>
                 <div className="bill">
                     <div className="billList">
                         <span>Total MRP</span>
@@ -44,15 +49,15 @@ export const AddToCard = () => {
                         <span>Platform Fee </span>
                         <span>Shipping Fee</span>
                     </div>
-                    <div className="billValue">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                    <div className="billList">
+                        <span>100</span>
+                        <span>100</span>
+                        <span>100</span>
+                        <span>100</span>
+                        <span>100</span>
                     </div>
                 </div>
-                <hr />
+
                 <div className="amount">
                     <span>Total Amount</span>
                     <span>546</span>

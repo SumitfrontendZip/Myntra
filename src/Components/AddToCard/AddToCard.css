@@ -160,7 +160,7 @@ section:first-child {
 }
 
 .card {
-    margin:5px 10px 5px 0px;
+    margin: 5px 10px 5px 0px;
     background: #efeded;
     outline: none;
     border: none;
@@ -178,19 +178,76 @@ section:first-child {
     margin-left: 5px;
     font-size: 12px;
 }
-.returnContent>span>span{
+
+.returnContent>span>span {
     font-weight: 700;
 }
-.cross{
-    rotate:calc(45deg);
+
+.cross {
+    rotate: calc(45deg);
     font-size: 2rem;
     position: absolute;
     right: 10px;
     top: 10px;
     cursor: pointer;
 }
-.wrapCards{
+
+.wrapCards {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+section>span {
+    color: rgb(92, 92, 92);
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.coupoundApply>img {
+    width: 30px;
+}
+
+.coupoundApply {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coupoundApply>span {
+    width: 160px;
+}
+
+.coupoundApply>button {
+    padding: 5px 15px;
+    border-color: #b44a63;
+}
+
+.couponsDesc>span:first-child {
+    color: red;
+    cursor: pointer;
+}
+
+.couponsDesc {
+    padding: 14px 0px;
+    border-bottom: 1px solid rgb(196, 196, 196);
+}
+
+.bill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.billList>span {
+    display: block;
+    font-size: 14px;
+    color: rgb(148, 148, 148);
+    margin: 5px 0px;
+}
+.priceTag{
+    margin: 10px 0px;
+    font-weight: 700;
+    font-size: 14px;
 }
