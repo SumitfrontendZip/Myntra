@@ -22,7 +22,6 @@ export const AddToCard = () => {
             const updatedCartItems = cartItems.filter(item => item.card.id !== id);
             setCartItems(updatedCartItems);
             localStorage.setItem('addToCardData', JSON.stringify(updatedCartItems));
-
         }
 
     }
