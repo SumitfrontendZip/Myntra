@@ -5,13 +5,24 @@ import bag from './bag.png'
 import './CardInfo.css'
 import bus from './bus.png'
 import { useParams } from "react-router-dom";
-function CardInfo() {
+import { useState } from "react";
+function CardInfo({handleAddToCardButton}) {
 
-    const {brand , name} = useParams();
-    const card = CardData.find(card=>card.brand === brand && card.name === name)
+    const [size , setSize] = useState(36)
+    const [color ,setColor] = useState('white')
 
-    if(!card) return <div>Product Not Found</div>
+    const sizeChat = [36,38,40,42,44,46]
 
+    const { brand, name } = useParams();
+    const card = CardData.find(card => card.brand === brand && card.name === name)
+
+    if (!card) return <div>Product Not Found</div>
+
+    const handleItemClick = (val) => {
+        setSize(val);
+        setColor('black');
+    };
+   
     return (
         <div className="card-Container">
             <span className="ImgSection"><img src={card.img} alt="" /></span>
@@ -33,19 +44,16 @@ function CardInfo() {
                 <span className="Color">Color : {card.color} </span>
                 <span className="selectSize">SELECT SIZE</span>
                 <div className="sizeChart">
-                    <span className="size">36</span>
-                    <span className="size">38</span>
-                    <span className="size">40</span>
-                    <span className="size">42</span>
-                    <span className="size">44</span>
-                    <span className="size">46</span>
+                    {
+                        sizeChat.map((val,idx)=>(<span className="size" key={idx} onClick={()=>(handleItemClick(val))}>{val}</span>))
+                    }
                 </div>
                 <div className="buttons">
-                    <button>
+                    <button onClick={()=>handleAddToCardButton(card,size)}>
                         <img src={bag} alt="" />
                         <span>ADD TO BAG</span>
                     </button>
-                    <button>
+                    <button >
                         <img src={heart} alt="" />
                         <span>WHISLIST</span>
                     </button>

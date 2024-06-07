@@ -4,6 +4,8 @@ import discountIcon from './discount.png'
 import offerIcon from './offer.png'
 
 export const AddToCard = () => {
+    const addCardDataLocalStorage = JSON.parse(localStorage.getItem('addToCardData')) || [];
+    
     return (
         <div className='addToCard'>
             <section>
@@ -26,7 +28,9 @@ export const AddToCard = () => {
                     </span>
                 </div>
                 <div className="wrapCards">
-                    <AddCard />
+                    {
+                        addCardDataLocalStorage.map((val, index) => (<AddCard key={index} card={val.card} size={val.size}/>))
+                    }
                 </div>
             </section>
             <section>

@@ -1,8 +1,12 @@
 import CardData from '../ProductImages/ProductImages'
 
+export const AddCard = ({ card, size }) => {
+    console.log(card);
 
-export const AddCard = () => {
-    const card = CardData[0]
+    const sizeChart = [36, 38, 40, 42, 44, 46]
+    const defaultSize = sizeChart.includes(size) ? size : 'SIZE';
+    const qtyOption = [1, 2, 3, 4, 5];
+
 
     return (
         <div className="placeOrderCard">
@@ -15,20 +19,13 @@ export const AddCard = () => {
                 <span className="cardBrandName">{card.brand}</span>
                 <span className="cardColor">Color : {card.color}</span>
                 <span className="sizeCard">
-                    <select className='card'>
-                        <option value="SIZE">SIZE: {36}</option>
-                        <option value="SIZE">SIZE: {38}</option>
-                        <option value="SIZE">SIZE: {40}</option>
-                        <option value="SIZE">SIZE: {42}</option>
-                        <option value="SIZE">SIZE: {44}</option>
-                        <option value="SIZE">SIZE: {46}</option>
+                    <select id="size-select" className='card' defaultValue={defaultSize}>
+                        {sizeChart.map((val, idx) => (<option value={val} key={idx}>SIZE: {val}</option>))}
                     </select>
                     <select className='card'>
-                        <option value="SIZE">QTY: 1</option>
-                        <option value="SIZE">QTY: 2</option>
-                        <option value="SIZE">QTY: 3</option>
-                        <option value="SIZE">QTY: 4</option>
-                        <option value="SIZE">QTY: 5</option>
+                        {
+                            qtyOption.map((val, idx) => (<option value="SIZE" key={idx}>QTY: {val}</option>))
+                        }
                     </select>
                 </span>
                 <div className="priceSection">
