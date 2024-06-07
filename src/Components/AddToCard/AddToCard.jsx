@@ -2,14 +2,32 @@ import './AddToCard.css'
 import { AddCard } from './AddCard'
 import discountIcon from './discount.png'
 import offerIcon from './offer.png'
+import { useEffect } from 'react'
+import { useState } from 'react'
+
 
 export const AddToCard = () => {
-    const addCardDataLocalStorage = JSON.parse(localStorage.getItem('addToCardData')) || [];
+    let addCardDataLocalStorage = JSON.parse(localStorage.getItem('addToCardData')) || [];
     const discountMRP = addCardDataLocalStorage.reduce((total, val) => total + val.card.price, 0);
     const totalMRP = addCardDataLocalStorage.reduce((total, val) => total + val.card.discountPrice, 0)
     const totalUnit = addCardDataLocalStorage.length
-    console.log(discountMRP);
-    console.log(totalMRP);
+    const [cartItems, setCartItems] = useState(addCardDataLocalStorage);
+
+
+    const handleRemoveCard = (id) => {
+
+        const indexToRemove = addCardDataLocalStorage.findIndex(item => item.card.id === id)
+        console.log(indexToRemove);
+        if (indexToRemove !== -1) {
+            const updatedCartItems = cartItems.filter(item => item.card.id !== id);
+            setCartItems(updatedCartItems);
+            localStorage.setItem('addToCardData', JSON.stringify(updatedCartItems));
+
+        }
+
+    }
+
+
 
     return (
         <div className='addToCard'>
@@ -34,7 +52,7 @@ export const AddToCard = () => {
                 </div>
                 <div className="wrapCards">
                     {
-                        addCardDataLocalStorage.map((val, index) => (<AddCard key={index} card={val.card} size={val.size} />))
+                        cartItems.map((val, index) => (<AddCard handleRemoveCard={handleRemoveCard} key={index} card={val.card} size={val.size} />))
                     }
                 </div>
             </section>
@@ -71,7 +89,7 @@ export const AddToCard = () => {
                     <span>Total Amount</span>
                     <span>{discountMRP}</span>
                 </div>
-                <button onClick={()=> alert('thank you')}>Place Order</button>
+                <button onClick={() => alert('thank you')}>Place Order</button>
             </section>
         </div>
     )

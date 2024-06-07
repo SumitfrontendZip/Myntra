@@ -37,9 +37,10 @@ import img40 from './040.jpg';
 import img41 from './041.jpg';
 import img42 from './042.jpg';
 import img43 from './043.jpg';
+import { v4 as uuidv4 } from 'uuid';
 
 
-const CardData = [
+const Cards = [
     {
         "img": img5,
         "name": "Dress",
@@ -470,4 +471,12 @@ const CardData = [
         "brand": "BrandE"
     }
 ];
+
+const CardData = Cards.map(val => {
+    return {
+        ...val,
+        id: uuidv4()
+    };
+});
+console.log(CardData);
 export default CardData

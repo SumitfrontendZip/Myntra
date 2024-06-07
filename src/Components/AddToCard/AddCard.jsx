@@ -1,6 +1,6 @@
 
-export const AddCard = ({ card, size }) => {
- 
+export const AddCard = ({ card, size , handleRemoveCard}) => {
+    console.log(card);
     const sizeChart = [36, 38, 40, 42, 44, 46]
     const defaultSize = sizeChart.includes(size) ? size : 'SIZE';
     const qtyOption = [1, 2, 3, 4, 5];
@@ -35,7 +35,7 @@ export const AddCard = ({ card, size }) => {
                     <span><span>7 Days</span> return Available</span>
                 </span>
             </div>
-            <span className='cross'>
+            <span className='cross' onClick={()=>handleRemoveCard(card.id)}>
                 +
             </span>
         </div>
