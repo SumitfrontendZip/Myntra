@@ -5,10 +5,9 @@ export const AddCard = ({ card, size }) => {
     const defaultSize = sizeChart.includes(size) ? size : 'SIZE';
     const qtyOption = [1, 2, 3, 4, 5];
 
-
     return (
         <div className="placeOrderCard">
-            <div className="productImage">
+            <div className="productImageCard">
                 <input type="checkbox" />
                 <img src={card.img} alt="" />
             </div>

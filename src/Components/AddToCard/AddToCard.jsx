@@ -5,9 +5,11 @@ import offerIcon from './offer.png'
 
 export const AddToCard = () => {
     const addCardDataLocalStorage = JSON.parse(localStorage.getItem('addToCardData')) || [];
-    const totalMRP = addCardDataLocalStorage.reduce((total, val) => total + val.card.price, 0);
-    const discountMRP = addCardDataLocalStorage.reduce((total, val) => total + val.card.discountPrice, 0)
+    const discountMRP = addCardDataLocalStorage.reduce((total, val) => total + val.card.price, 0);
+    const totalMRP = addCardDataLocalStorage.reduce((total, val) => total + val.card.discountPrice, 0)
     const totalUnit = addCardDataLocalStorage.length
+    console.log(discountMRP);
+    console.log(totalMRP);
 
     return (
         <div className='addToCard'>
@@ -23,7 +25,7 @@ export const AddToCard = () => {
                 <div className="removeSection">
                     <span>
                         <input type="checkbox" />
-                        <label htmlFor="selected">{1}/{1} ITEMS SELECTED</label>
+                        <label htmlFor="selected">{1}/{totalUnit} ITEMS SELECTED</label>
                     </span>
                     <span>
                         <span className='remove'>REMOVE</span>
@@ -57,8 +59,8 @@ export const AddToCard = () => {
                         <span>Shipping Fee</span>
                     </div>
                     <div className="billList">
-                        <span>{discountMRP}</span>
-                        <span>-{totalMRP}</span>
+                        <span>{totalMRP}</span>
+                        <span>-{totalMRP - discountMRP}</span>
                         <span>Apply Coupoun</span>
                         <span>0</span>
                         <span>0</span>
@@ -67,9 +69,9 @@ export const AddToCard = () => {
 
                 <div className="amount">
                     <span>Total Amount</span>
-                    <span>{discountMRP - totalMRP}</span>
+                    <span>{discountMRP}</span>
                 </div>
-                <button>Place Order</button>
+                <button onClick={()=> alert('thank you')}>Place Order</button>
             </section>
         </div>
     )

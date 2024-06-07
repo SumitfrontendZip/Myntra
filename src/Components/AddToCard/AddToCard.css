@@ -1,5 +1,5 @@
 .addToCard {
-    margin-top: 100px;
+    margin-top: 80px;
     display: flex;
     justify-content: center;
     font-family: sans-serif;
@@ -113,7 +113,7 @@ section:first-child {
     cursor: pointer;
 }
 
-.productImage>img {
+.productImageCard>img {
     width: 120px;
 }
 
@@ -127,18 +127,17 @@ section:first-child {
     position: relative;
 }
 
-.productImage {
+.productImageCard {
     position: relative;
 }
 
-.productImage>input {
+.productImageCard>input {
     position: absolute;
     top: -15px;
     left: 0px;
-    z-index: 1;
-}
+ }
 
-.productImage>img {
+.productImageCard>img {
     z-index: -1;
 }
 
