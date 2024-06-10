@@ -7,9 +7,7 @@ import bus from './bus.png'
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 function CardInfo({ handleAddToCardButton }) {
-
     const [size, setSize] = useState(undefined)
- 
     const sizeChat = [36, 38, 40, 42, 44, 46]
 
     const { brand, name } = useParams();
@@ -43,7 +41,7 @@ function CardInfo({ handleAddToCardButton }) {
                 <span className="selectSize">SELECT SIZE</span>
                 <div className="sizeChart">
                     {
-                        sizeChat.map((val, idx) => (<span className="size" key={idx} style={val===size ? {background:'rgb(243, 91, 91)'} : {background:'white'} } onClick={() => (handleItemClick(val))}>{val}</span>))
+                        sizeChat.map((val, idx) => (<span className="size" key={idx} style={val === size ? { background: 'rgb(243, 91, 91)' } : { background: 'white' }} onClick={() => (handleItemClick(val))}>{val}</span>))
                     }
                 </div>
                 <div className="buttons">

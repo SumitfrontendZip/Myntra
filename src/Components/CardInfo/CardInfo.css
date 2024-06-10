@@ -4,9 +4,11 @@
     justify-items: center;
     align-items: center;
 }
-.ImgSection{
+
+.ImgSection {
     width: 50vw;
 }
+
 .ImgSection>img {
     width: 700px;
 }
@@ -41,14 +43,17 @@
 .card-details>.priceSection>.discountedPrice {
     font-size: 1.4rem;
 }
-.card-details>.priceSection>.totalOff{
+
+.card-details>.priceSection>.totalOff {
     font-size: 1.3rem;
 }
-.Color{
+
+.Color {
     font-size: 1.3rem;
     margin: 15px 0px;
     color: rgb(137, 137, 137);
 }
+
 .size {
     border: 1px solid rgb(161, 161, 161);
     border-radius: 100%;
@@ -57,33 +62,39 @@
     margin: 0px 8px;
     font-weight: 700;
 }
-.sizeChart{
+
+.sizeChart {
     margin: 30px 0px;
     color: rgb(48, 45, 45);
 }
-.selectSize{
+
+.selectSize {
     color: rgb(137, 137, 137);
 }
-.buttons{
-    display: flex;
-    justify-content: normal;
+
+.buttons {
+     justify-content: flex-start !important;
     align-items: center;
 }
-.buttons > button{
+
+.buttons>button {
     width: 220px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.buttons > button > img {
+
+.buttons>button>img {
     width: 20px;
     margin-right: 10px;
 }
-.busIcon{
+
+.busIcon {
     width: 30px;
     margin-left: 10px;
 }
-.deliveryText{
+
+.deliveryText {
     font-size: 1.3rem;
     display: flex;
     justify-content: normal;
@@ -91,13 +102,15 @@
     margin: 20px 0px 10px 0px;
     font-weight: 700;
 }
-.delivaryOptions{
+
+.delivaryOptions {
     display: flex;
     align-items: center;
     position: relative;
     margin: 10px 0px;
 }
-.delivaryOptions > input{
+
+.delivaryOptions>input {
     width: 250px;
     height: 30px;
     border: 1px solid rgb(167, 167, 167);
@@ -105,7 +118,8 @@
     outline: none;
     padding: 4px 10px;
 }
-.delivaryOptions > span{
+
+.delivaryOptions>span {
     position: absolute;
     left: 210px;
     color: red;
@@ -113,7 +127,7 @@
     font-size: 1.2rem;
     cursor: pointer;
 }
-.deliveryPinText{
+
+.deliveryPinText {
     color: rgb(141, 141, 141);
 }
- 

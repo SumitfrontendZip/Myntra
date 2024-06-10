@@ -2,7 +2,6 @@ import './AddToCard.css'
 import { AddCard } from './AddCard'
 import discountIcon from './discount.png'
 import offerIcon from './offer.png'
-import { useEffect } from 'react'
 import { useState } from 'react'
 
 
@@ -12,7 +11,6 @@ export const AddToCard = () => {
     const totalMRP = addCardDataLocalStorage.reduce((total, val) => total + val.card.discountPrice, 0)
     const totalUnit = addCardDataLocalStorage.length
     const [cartItems, setCartItems] = useState(addCardDataLocalStorage);
-
 
     const handleRemoveCard = (id) => {
 
