@@ -5,13 +5,16 @@ import offerIcon from './offer.png'
 import { useState } from 'react'
 
 
-const AddToCard = ({ deliveryCode, handleInputChange  }) => {
+const AddToCard = ({ deliveryCode, handleInputChange, handleNotificationBar }) => {
     let addCardDataLocalStorage = JSON.parse(localStorage.getItem('addToCardData')) || [];
     const discountMRP = addCardDataLocalStorage.reduce((total, val) => total + val.card.price, 0);
     const totalMRP = addCardDataLocalStorage.reduce((total, val) => total + val.card.discountPrice, 0)
     const totalUnit = addCardDataLocalStorage.length
     const [cartItems, setCartItems] = useState(addCardDataLocalStorage);
     const [inputValueDeliver, setInputValueDeliver] = useState(false)
+    const [qtyItem, setQtyItem] = useState(1)
+
+
 
     const handleRemoveCard = (id) => {
 
@@ -26,11 +29,17 @@ const AddToCard = ({ deliveryCode, handleInputChange  }) => {
             const updatedCartItems = cartItems.filter(item => item.card.id !== id);
             setCartItems(updatedCartItems);
             localStorage.setItem('addToCardData', JSON.stringify(updatedCartItems));
+
         }
+        handleNotificationBar(id)
     }
 
     const handleChangeAddress = () => {
         setInputValueDeliver(!inputValueDeliver)
+    }
+
+    const handleChangeQty = (e) => {
+        setQtyItem(e.target.value)
     }
 
     return (
@@ -38,12 +47,8 @@ const AddToCard = ({ deliveryCode, handleInputChange  }) => {
             <section>
                 <div className="deliverySection">
                     <span>Deliver to : <span className='deliveryCode'>
-                        {inputValueDeliver  ? (
-                            <input
-                                type='text'
-                                value={deliveryCode}
-                                onChange={handleInputChange}
-                            />
+                        {inputValueDeliver ? (
+                            <input type='text' />
                         ) : (
                             <span>{deliveryCode}</span>
                         )}
@@ -66,7 +71,7 @@ const AddToCard = ({ deliveryCode, handleInputChange  }) => {
                 </div>
                 <div className="wrapCards">
                     {
-                        cartItems.map((val, index) => (<AddCard handleRemoveCard={handleRemoveCard} key={index} card={val.card} size={val.size} />))
+                        cartItems.map((val, index) => (<AddCard handleChangeQty={handleChangeQty} handleRemoveCard={handleRemoveCard} key={index} card={val.card} size={val.size} />))
                     }
                 </div>
             </section>
@@ -91,8 +96,8 @@ const AddToCard = ({ deliveryCode, handleInputChange  }) => {
                         <span>Shipping Fee</span>
                     </div>
                     <div className="billList">
-                        <span>{totalMRP}</span>
-                        <span>-{totalMRP - discountMRP}</span>
+                        <span>{totalMRP * qtyItem}</span>
+                        <span>-{(totalMRP - discountMRP) * qtyItem}</span>
                         <span>Apply Coupoun</span>
                         <span>0</span>
                         <span>0</span>
@@ -101,7 +106,7 @@ const AddToCard = ({ deliveryCode, handleInputChange  }) => {
 
                 <div className="amount">
                     <span>Total Amount</span>
-                    <span>{discountMRP}</span>
+                    <span>{discountMRP * qtyItem}</span>
                 </div>
                 <button onClick={() => alert('thank you')}>Place Order</button>
             </section>

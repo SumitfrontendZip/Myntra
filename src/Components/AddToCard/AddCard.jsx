@@ -1,9 +1,10 @@
 
-export const AddCard = ({ card, size , handleRemoveCard}) => {
-    console.log(card);
+export const AddCard = ({ card, size, handleRemoveCard ,handleChangeQty}) => {
     const sizeChart = [36, 38, 40, 42, 44, 46]
     const defaultSize = sizeChart.includes(size) ? size : 'SIZE';
     const qtyOption = [1, 2, 3, 4, 5];
+
+  
 
     return (
         <div className="placeOrderCard">
@@ -19,9 +20,9 @@ export const AddCard = ({ card, size , handleRemoveCard}) => {
                     <select id="size-select" className='card' defaultValue={defaultSize}>
                         {sizeChart.map((val, idx) => (<option value={val} key={idx}>SIZE: {val}</option>))}
                     </select>
-                    <select className='card'>
+                    <select className='card ' onChange={handleChangeQty }>
                         {
-                            qtyOption.map((val, idx) => (<option value="SIZE" key={idx}>QTY: {val}</option>))
+                            qtyOption.map((val, idx) => (<option value={val} key={idx}>QTY: {val}</option>))
                         }
                     </select>
                 </span>
@@ -35,7 +36,7 @@ export const AddCard = ({ card, size , handleRemoveCard}) => {
                     <span><span>7 Days</span> return Available</span>
                 </span>
             </div>
-            <span className='cross' onClick={()=>handleRemoveCard(card.id)}>
+            <span className='cross' onClick={() => handleRemoveCard(card.id)}>
                 +
             </span>
         </div>

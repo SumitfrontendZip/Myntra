@@ -25,6 +25,14 @@ function App() {
       setCountBag(updatedData.length);
     }
   };
+  
+  const handleNotificationBar = (id) => {
+    if (id === 'removeAllElements') {
+      setCountBag(0)
+    }
+    setCountBag(countBag-1)
+  }
+
 
   const handleInputValue = (value) => {
     setDeliveryCode(value);
@@ -54,7 +62,7 @@ function App() {
       element: (
         <>
           <Navbar />
-          <AddToCard deliveryCode={deliveryCode} />
+          <AddToCard deliveryCode={deliveryCode} handleNotificationBar={handleNotificationBar} />
         </>
       )
     }
