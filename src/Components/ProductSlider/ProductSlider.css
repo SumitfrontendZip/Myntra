@@ -18,22 +18,24 @@
     display: flex;
 }
 
-.buttons>span {
+.buttonSlider>span {
     width: 10px;
     height: 10px;
     border-radius: 100%;
     margin: 0px 10px;
 }
 
-.buttons {
+.buttonSlider , .buttons {
     cursor: pointer;
     margin-top: 20px;
     width: 100%;
     height: 60px;
     display: flex;
-    justify-content: center;
+    justify-content: center !important;
 }
-
+.buttons{
+    justify-content: normal !important;
+}
 .show-hidden {
     background: rgb(255, 214, 214);
 }

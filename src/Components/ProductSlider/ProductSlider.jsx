@@ -37,7 +37,7 @@ function ProductSlider() {
                     ))
                 }
             </div>
-            <div className="buttons">
+            <div className="buttonSlider">
                 {images.map((_, index) => (
                     <span key={index} onClick={() => handleSliderChange(index)} className={index === slider ? 'show' : 'show-hidden'}></span>
                 ))}

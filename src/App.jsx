@@ -7,6 +7,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { counterContext } from './Components/context/context'; // Context names typically start with an uppercase letter
 import { useState } from 'react';
 import { NotPageFound } from './Components/NotPageFound/NotPageFound';
+import { v4 as uuid } from 'uuid';
+
 
 function App() {
   const initialAddToCardData = JSON.parse(localStorage.getItem('addToCardData')) || [];
@@ -22,6 +24,10 @@ function App() {
 
     if (!existingCard) {
       const updatedData = [...initialAddToCardData, { card, size }];
+      console.log(updatedData);
+      updatedData.forEach((item)=>{
+        item.id = uuid()
+      })
       localStorage.setItem('addToCardData', JSON.stringify(updatedData));
       setCountBag(updatedData.length);
     }
@@ -67,8 +73,8 @@ function App() {
         </>
       )
     }, {
-      path:'*',
-      element: (<><Navbar/><NotPageFound/></>)
+      path: '*',
+      element: (<><Navbar /><NotPageFound /></>)
     }
   ]);
 
