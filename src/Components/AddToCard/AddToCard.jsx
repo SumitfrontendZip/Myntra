@@ -29,8 +29,6 @@ export const AddToCard = () => {
 
     }
 
-
-
     return (
         <div className='addToCard'>
             <section>

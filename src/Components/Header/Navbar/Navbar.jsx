@@ -8,8 +8,9 @@ import { Link } from 'react-router-dom'
 function Navbar() {
     return (
         <nav>
+
             <img src={Icon} alt='' className='burggerIcon' />
-            <img src={logo} alt="" />
+            <Link to='/'><img src={logo} alt="" /></Link>
             <Mainmenu />
             <SearchBar />
             <NavProfile />

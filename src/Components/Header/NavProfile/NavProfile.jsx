@@ -1,14 +1,18 @@
-import profile from './customer.png'
-import wishlist from './heart.png'
-import bag from './bag.png'
+import profileIcon from './customer.png'
+import wishlistIcon from './heart.png'
+import bagIcon from './bag.png'
 import './Navprofile.css'
 import NavProfileItems from '../NavProfileItems/NavProfileItems'
+
+
 function NavProfile() {
     const ProfileItems = [
-        { itemName: 'Profile', img: profile },
-        { itemName: 'Wishlist', img: wishlist },
-        { itemName: 'Bag', img: bag }
-    ]
+        { itemName: 'Profile', icon: profileIcon, navigateTo: '/' },
+        { itemName: 'Wishlist', icon: wishlistIcon, navigateTo: '/' },
+        { itemName: 'Bag', icon: bagIcon, navigateTo: '/placeOrder' },
+    ];
+
+
     return (
         <div className='navProfile'>
             {
@@ -16,6 +20,7 @@ function NavProfile() {
                     <NavProfileItems key={index} items={value} />
                 ))
             }
+
         </div>
     )
 }
