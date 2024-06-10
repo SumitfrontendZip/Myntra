@@ -16,6 +16,11 @@ export const AddToCard = () => {
 
     const handleRemoveCard = (id) => {
 
+        if (id === 'removeAllElements') {
+            setCartItems([])
+            localStorage.removeItem('addToCardData')
+        }
+
         const indexToRemove = addCardDataLocalStorage.findIndex(item => item.card.id === id)
         console.log(indexToRemove);
         if (indexToRemove !== -1) {
@@ -45,7 +50,7 @@ export const AddToCard = () => {
                         <label htmlFor="selected">{1}/{totalUnit} ITEMS SELECTED</label>
                     </span>
                     <span>
-                        <span className='remove'>REMOVE</span>
+                        <span className='remove' onClick={() => handleRemoveCard('removeAllElements')}>REMOVE</span>
                         <span className='remove'>MOVE TO WISHLIST</span>
                     </span>
                 </div>
