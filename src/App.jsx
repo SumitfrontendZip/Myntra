@@ -6,6 +6,7 @@ import { Home } from './Components/Home/Home';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { counterContext } from './Components/context/context'; // Context names typically start with an uppercase letter
 import { useState } from 'react';
+import { NotPageFound } from './Components/NotPageFound/NotPageFound';
 
 function App() {
   const initialAddToCardData = JSON.parse(localStorage.getItem('addToCardData')) || [];
@@ -25,12 +26,12 @@ function App() {
       setCountBag(updatedData.length);
     }
   };
-  
+
   const handleNotificationBar = (id) => {
     if (id === 'removeAllElements') {
       setCountBag(0)
     }
-    setCountBag(countBag-1)
+    setCountBag(countBag - 1)
   }
 
 
@@ -65,6 +66,9 @@ function App() {
           <AddToCard deliveryCode={deliveryCode} handleNotificationBar={handleNotificationBar} />
         </>
       )
+    }, {
+      path:'*',
+      element: (<><Navbar/><NotPageFound/></>)
     }
   ]);
 
