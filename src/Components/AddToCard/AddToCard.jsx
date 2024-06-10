@@ -5,12 +5,13 @@ import offerIcon from './offer.png'
 import { useState } from 'react'
 
 
-export const AddToCard = () => {
+const AddToCard = ({ deliveryCode, handleInputChange  }) => {
     let addCardDataLocalStorage = JSON.parse(localStorage.getItem('addToCardData')) || [];
     const discountMRP = addCardDataLocalStorage.reduce((total, val) => total + val.card.price, 0);
     const totalMRP = addCardDataLocalStorage.reduce((total, val) => total + val.card.discountPrice, 0)
     const totalUnit = addCardDataLocalStorage.length
     const [cartItems, setCartItems] = useState(addCardDataLocalStorage);
+    const [inputValueDeliver, setInputValueDeliver] = useState(false)
 
     const handleRemoveCard = (id) => {
 
@@ -20,21 +21,34 @@ export const AddToCard = () => {
         }
 
         const indexToRemove = addCardDataLocalStorage.findIndex(item => item.card.id === id)
-        console.log(indexToRemove);
+
         if (indexToRemove !== -1) {
             const updatedCartItems = cartItems.filter(item => item.card.id !== id);
             setCartItems(updatedCartItems);
             localStorage.setItem('addToCardData', JSON.stringify(updatedCartItems));
         }
+    }
 
+    const handleChangeAddress = () => {
+        setInputValueDeliver(!inputValueDeliver)
     }
 
     return (
         <div className='addToCard'>
             <section>
                 <div className="deliverySection">
-                    <span>Deliver to : <span className='deliveryCode'>{244001}</span></span>
-                    <button>Change Address</button>
+                    <span>Deliver to : <span className='deliveryCode'>
+                        {inputValueDeliver  ? (
+                            <input
+                                type='text'
+                                value={deliveryCode}
+                                onChange={handleInputChange}
+                            />
+                        ) : (
+                            <span>{deliveryCode}</span>
+                        )}
+                    </span></span>
+                    <button onClick={() => handleChangeAddress()}>Change Address</button>
                 </div>
                 <div className="offerSection">
                     <span><img src={discountIcon} alt="" /><span>Available Offers</span></span>
@@ -94,3 +108,4 @@ export const AddToCard = () => {
         </div>
     )
 }
+export default AddToCard;

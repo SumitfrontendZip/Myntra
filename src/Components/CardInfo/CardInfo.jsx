@@ -6,9 +6,15 @@ import './CardInfo.css'
 import bus from './bus.png'
 import { useParams } from "react-router-dom";
 import { useState } from "react";
-function CardInfo({ handleAddToCardButton }) {
+function CardInfo({ handleAddToCardButton, handleInputValue }) {
     const [size, setSize] = useState(undefined)
+    const [inputChange, setInputChange] = useState('')
     const sizeChat = [36, 38, 40, 42, 44, 46]
+
+    const handleInputChange = (e) => {
+        setInputChange(e.target.value)
+    }
+
 
     const { brand, name } = useParams();
     const card = CardData.find(card => card.brand === brand && card.name === name)
@@ -56,11 +62,12 @@ function CardInfo({ handleAddToCardButton }) {
                 </div>
                 <span className="deliveryText">DELIVERY OPTIONS <img src={bus} alt="bus" className="busIcon" /></span>
                 <div className="delivaryOptions">
-                    <input type="text" />
-                    <span>check</span>
+                    <input type="number" onChange={(e) => handleInputChange(e)} />
+                    <button onClick={()=>handleInputValue(inputChange)}>check</button>
                 </div>
                 <span className="deliveryPinText">Please enter PIN code to check delivery time & Pay on Delivery Availability</span>
             </div>
+
         </div>
     )
 }
