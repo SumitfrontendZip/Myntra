@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import CardData from '../ProductImages/ProductImages';
 import Category from '../Category/Category';
 import Filter from '../FIlters/Filter';
@@ -6,9 +6,16 @@ import ProductCards from '../ProductCards/ProductCards';
 import ProductSlider from '../ProductSlider/ProductSlider';
 
 export const Home = () => {
+    const [productData, setProductData] = useState(CardData)
+    const [filterData, setFilterData] = useState({
+        color: 'All',
+        brand: 'All',
+        price: { min: 0, max: Infinity }
+    });
+
+
     const getUniqueVal = (property) => {
         let newValue = CardData.map((curEle) => curEle[property])
-
         return [... new Set(newValue)]
     }
 
@@ -22,41 +29,16 @@ export const Home = () => {
         { min: 5001, max: '5001+' }
     ]
 
-    const [productData, setProductData] = useState(CardData)
-    const [colorChange, setColorChange] = useState([])
-    const [brandChange, setBrandChange] = useState([])
-    const [priceChange, setPriceChange] = useState([])
-
-    const handleChangeColor = (item) => {
-        console.log(item);
-        if (item === 'All') return setColorChange([...CardData])
-        let newValue = CardData.filter((prevData) => {
-            return item === prevData.color
-        })
-        setColorChange(newValue)
-    }
-
-    const handleChangeBrand = (item) => {
-        if (item === 'All') return setBrandChange([...CardData])
-        let newValue = CardData.filter((prevData) => {
-            return item === prevData.brand
-        })
-        setBrandChange(newValue)
-    }
-
-    const handleChangePrice = (item = { min: 0, max: Infinity }) => {
-        let newValue = CardData.filter((prevData) => {
-            return prevData.price >= item.min && prevData.price <= item.max;
+    const handleFilterItems = () => {
+        let newValue = CardData.filter((product) => {
+            const matchesColor = filterData.color === 'All' || product.color === filterData.color;
+            const matchesBrand = filterData.brand === 'All' || product.brand === filterData.brand;
+            const matchesPrice = product.price >= filterData.price.min && product.price <= filterData.price.max;
+            return matchesColor && matchesBrand && matchesPrice;
         });
-        setPriceChange(newValue)
+        console.log(newValue);
+        setProductData(newValue);
     }
-
-    useEffect(() => {
-        if (brandChange.length > 0) setProductData([...brandChange])
-        if (colorChange.length > 0) setProductData([...colorChange])
-        if (priceChange.length > 0) setProductData([...priceChange])
-    }, [brandChange, colorChange, priceChange])
-
 
     return (
         < >
@@ -67,9 +49,7 @@ export const Home = () => {
                     colors={colors}
                     brands={brands}
                     price={price}
-                    handleChangeColor={handleChangeColor}
-                    handleChangeBrand={handleChangeBrand}
-                    handleChangePrice={handleChangePrice}
+                    handleFilterItems={handleFilterItems}
                 />
                 <ProductCards CardData={productData} />
             </div>

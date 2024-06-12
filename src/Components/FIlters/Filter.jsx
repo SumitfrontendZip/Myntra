@@ -1,26 +1,18 @@
 import { useState } from 'react';
 import './Filter.css'
 
-function Filter({ colors, brands, price, handleChangeColor, handleChangeBrand, handleChangePrice }) {
-
-    const [selectedColor, setSelectedColor] = useState(null);
-    const [selectedBrand, setSelectedBrand] = useState(null);
-    const [selectedPrice, setSelectedPrice] = useState(null);
-
+function Filter({ colors, brands, price, handleFilterItems }) {
+    const [selectedItem, setSelectedItem] = useState(null)
 
     const handleChangeItem = (type, item) => {
-        const handlers = {
-            color: handleChangeColor,
-            brand: handleChangeBrand,
-            price: handleChangePrice,
-        };
-
+        const handlers = { type: handleFilterItems() };
+        console.log(type);
         if (type === 'color') {
-            setSelectedColor(item);
+            setSelectedItem(item);
         } else if (type === 'brand') {
-            setSelectedBrand(item);
+            setSelectedItem(item);
         } else if (type === 'price') {
-            setSelectedPrice(item);
+            setSelectedItem(item);
         }
 
         handlers[type](item);
@@ -28,24 +20,18 @@ function Filter({ colors, brands, price, handleChangeColor, handleChangeBrand, h
 
     const items = (type, itemsData) => {
 
-        const selected = type === 'color' ? selectedColor : type === 'brand' ? selectedBrand : selectedPrice;
-
-
-        if (itemsData === price) {
-            return itemsData.map((item, index) => (
-                <div className="items" key={index}>
-                    <input type="checkbox" onChange={() => handleChangeItem(type, item)} checked={selected === item} />
-                    <label>{item.min} to {item.max}</label>
-                </div>
-            ));
-        }
+        const selected = type === 'color' ? selectedItem : type === 'brand' ? selectedItem : selectedItem;
 
         return itemsData.map((item, index) => (
             <div className='items' key={index}>
                 <input type="checkbox" onChange={() => handleChangeItem(type, item)} checked={selected === item} />
-                <label htmlFor={item}>{item}</label>
+                {
+                    type === 'price' ? <label>{item.min} to {item.max}</label> : <label>{item}</label>
+                }
             </div>
         ));
+
+
     };
 
 
