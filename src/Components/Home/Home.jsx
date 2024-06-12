@@ -29,15 +29,28 @@ export const Home = () => {
         { min: 5001, max: '5001+' }
     ]
 
-    const handleFilterItems = () => {
-        let newValue = CardData.filter((product) => {
-            const matchesColor = filterData.color === 'All' || product.color === filterData.color;
-            const matchesBrand = filterData.brand === 'All' || product.brand === filterData.brand;
-            const matchesPrice = product.price >= filterData.price.min && product.price <= filterData.price.max;
-            return matchesColor && matchesBrand && matchesPrice;
-        });
-        console.log(newValue);
-        setProductData(newValue);
+    const handleFilterItems = (type, items) => {
+        setFilterData(() => {
+            if ('color' === type) {
+                return filterData.color = items
+            }
+            if ('brand' === type) {
+                return filterData.brand = items
+            }
+            // filterData.price.min = items.min
+            // filterData.price.max = items.max
+        })
+
+        console.log(filterData);
+
+        // let newValue = CardData.filter((product) => {
+        //     const matchesColor = filterData.color === 'All' || product.color === filterData.color;
+        //     const matchesBrand = filterData.brand === 'All' || product.brand === filterData.brand;
+        //     const matchesPrice = product.price >= filterData.price.min && product.price <= filterData.price.max;
+        //     return matchesColor && matchesBrand && matchesPrice;
+        // });
+        // console.log(newValue);
+        // setProductData(newValue);
     }
 
     return (

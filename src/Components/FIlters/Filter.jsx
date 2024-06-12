@@ -5,17 +5,15 @@ function Filter({ colors, brands, price, handleFilterItems }) {
     const [selectedItem, setSelectedItem] = useState(null)
 
     const handleChangeItem = (type, item) => {
-        const handlers = { type: handleFilterItems() };
-        console.log(type);
         if (type === 'color') {
-            setSelectedItem(item);
+            setSelectedItem(item)
         } else if (type === 'brand') {
             setSelectedItem(item);
         } else if (type === 'price') {
             setSelectedItem(item);
         }
 
-        handlers[type](item);
+        handleFilterItems(type, item)
     };
 
     const items = (type, itemsData) => {
@@ -24,7 +22,7 @@ function Filter({ colors, brands, price, handleFilterItems }) {
 
         return itemsData.map((item, index) => (
             <div className='items' key={index}>
-                <input type="checkbox" onChange={() => handleChangeItem(type, item)} checked={selected === item} />
+                <input type="checkbox" onChange={() => handleChangeItem(type, items)} checked={selected === item} />
                 {
                     type === 'price' ? <label>{item.min} to {item.max}</label> : <label>{item}</label>
                 }
