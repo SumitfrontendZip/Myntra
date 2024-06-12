@@ -2,15 +2,28 @@ import { useState } from 'react';
 import './Filter.css'
 
 function Filter({ colors, brands, price, handleFilterItems }) {
-    const [selectedItem, setSelectedItem] = useState(null)
+    const [selectedItem, setSelectedItem] = useState({
+        color: 'All',
+        brand: 'All',
+        price: { min: 0, max: Infinity }
+    })
 
     const handleChangeItem = (type, item) => {
         if (type === 'color') {
-            setSelectedItem(item)
+            setSelectedItem((prevState) => {
+                return { ...prevState, color: item }
+            })
         } else if (type === 'brand') {
-            setSelectedItem(item);
+            setSelectedItem((prevState) => {
+                return { ...prevState, brand: item }
+            })
         } else if (type === 'price') {
-            setSelectedItem(item);
+            setSelectedItem((prevState) => {
+                return {
+                    ...prevState, price: { min: item.min, max: item.max }
+                }
+            })
+
         }
 
         handleFilterItems(type, item)
@@ -18,11 +31,20 @@ function Filter({ colors, brands, price, handleFilterItems }) {
 
     const items = (type, itemsData) => {
 
-        const selected = type === 'color' ? selectedItem : type === 'brand' ? selectedItem : selectedItem;
-
-        return itemsData.map((item, index) => (
+        const isSelected = (item) => {
+            switch (type) {
+                case 'color':
+                    return selectedItem.color === item;
+                case 'brand':
+                    return selectedItem.brand === item;
+                case 'price':
+                    return selectedItem.price.min === item.min && selectedItem.price.max === item.max;
+                default:
+                    return false;
+            }
+        }; return itemsData.map((item, index) => (
             <div className='items' key={index}>
-                <input type="checkbox" onChange={() => handleChangeItem(type, items)} checked={selected === item} />
+                <input type="checkbox" onChange={() => handleChangeItem(type, item)} checked={isSelected(item)} />
                 {
                     type === 'price' ? <label>{item.min} to {item.max}</label> : <label>{item}</label>
                 }
